@@ -9,5 +9,9 @@ The scope of this project will include developing an external hub that 4G client
 
 ---
 # Getting Started
-1. Pull this repo to your local machine 
-2. run ```pip install -r requirements.txt``` to install all dependencies for the project
+1. Pull this repo to your local machine
+2. Install Python3 if you do not have it already installed
+3. Create a virtual environment for the project (```python3 -m venv env```)
+4. Activate the virtual environment (```source env/bin/activate```)
+    - Run ```deactivate ``` to turn off virtual environment
+5. Run ```pip install -r requirements.txt``` to install project environment dependencies
