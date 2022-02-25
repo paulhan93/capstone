@@ -25,3 +25,6 @@ These instructions are for MAC, so if you use a different machine, your commands
     - Go to http://127.0.0.1:8000/, you should see a basic Django page
 8. To create a super user, run ```% python manage.py createsuperuser``` and follow the steps to create an account
     - Go to http://127.0.0.1:8000/admin to sign in and play around 
+9. To create an app, run ```% python manage.py startapp <app_name>```
+    - Each app should handle one task really well
+    - We can create an app to create objects, set up pages, etc.
