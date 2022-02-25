@@ -1,5 +1,5 @@
 """
-ASGI config for ClientHub project.
+ASGI config for clienthub project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ClientHub.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'clienthub.settings')
 
 application = get_asgi_application()
