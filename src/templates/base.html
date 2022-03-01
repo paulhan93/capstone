@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>4G Client Hub</title>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    {{ request.user }}
+    {{ request.user.is_authenticated }}
+
+    {% block content %}
+    replace me
+    {% endblock content %}
+</body>
+</html>
