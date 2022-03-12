@@ -37,12 +37,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'hello',
-    'allauth',
+    #'hello',
+    #'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'allauth.socialaccount.providers.google',
     'django.contrib.sites',
+
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -128,6 +130,9 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+#FOR CIRSPY PACKS
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+ 
 #FOR GOOGLE OAUTH
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
@@ -148,5 +153,6 @@ SOCIALACCOUNT_PROVIDERS = {
 
 SITE_ID = 4
 
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_RUL = '/'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'account_login'
+#ACCOUNT_LOGOUT_REDIRECT_URL = 'login'
