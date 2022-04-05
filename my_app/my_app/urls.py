@@ -24,6 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #path('', TemplateView.as_view(template_name="index.html")),
     path('home/', TemplateView.as_view(template_name='dashboard/home.html'), name='home'),
+    path('jira/', TemplateView.as_view(template_name='dashboard/jira.html'), name='Jira'),
+    path('slack/', TemplateView.as_view(template_name='dashboard/slack.html'), name='Slack'),
     path('accounts/', include('allauth.urls')),
     #path('logout', LogoutView.as_view()),
 ]
