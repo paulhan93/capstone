@@ -9,10 +9,11 @@ The scope of this project will include developing an external hub that 4G client
 
 ---
 # Running the App Locally
-1. Have python3 installed (3.9.10 listed in pyvenv.cfg)
-2. Run ``` env\Scripts\Activate ``` (windows might ask you to enable scripts)
-3. CD into ``` my_app ``` directory
-4. Run ``` python manage.py runserver ```
-5. Type into a web browser ``` http://127.0.0.1:8000/admin ``` for the admin page or ``` http://127.0.0.1:8000/hello ``` for the hello page
-6. To exit the virtual env, type ``` deactivate ``` in terminal
-7. To stop the django app, type ``` ctrl-v ``` in terminal 
+1. Have python3 installed (3.9.10)
+2. Delete any existing virtual environment folder and create a new one using command ``` python3 -m venv venv ``` in the first my_app folder
+3. Run ``` venv\Scripts\Activate ``` (windows might ask you to enable scripts) to activate the virtual environment
+4. Run ``` pip install -r requirements.txt ``` to install dependencies 
+5. Run ``` python manage.py runserver ``` to run django site
+6. Type into a web browser ``` http://127.0.0.1:8000/admin ``` for the admin login page or ``` http://127.0.0.1:8000/home ``` for the home page
+7. To exit the virtual env, type ``` deactivate ``` in terminal
+8. To stop the django app, type ``` ctrl-v ``` in terminal 
