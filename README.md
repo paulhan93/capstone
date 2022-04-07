@@ -19,7 +19,7 @@ The scope of this project will include developing an external hub that 4G client
 8. To stop the django app, type ``` ctrl-v ``` in terminal 
 
 ---
-##Mac Users
+## Mac Users
 These instructions are for MAC, so if you use a different machine, your commands will probably be different.
 1. Pull this repo to your local machine
 2. Install Python3 if you do not have it already installed
