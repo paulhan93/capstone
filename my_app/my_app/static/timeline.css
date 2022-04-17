@@ -1,0 +1,210 @@
+html, body {
+    height: 100%;
+  }
+  
+  body {
+    font-family: "Quicksand", sans-serif;
+    background-color: #ECF0F1;
+    /*
+    display: flex;
+    flex-direction: column;
+    */
+  }
+  
+  h1 {
+    text-align: center;
+    height: 38px;
+    margin: 60px;
+  }
+
+   .timeline{
+    position: absolute;
+    top: 30em;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+   }
+
+  .flex-parent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .input-flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80vw;
+    height: 100px;
+    max-width: 1300px;
+    position: relative;
+    
+  }
+  
+  .input-line-div{
+    align-items: center;
+    width: 83vw;
+    bottom: -69px;
+    max-width: 1300px;
+    position: relative;
+  }
+
+  .input-line{
+    height: 7px !important; 
+    background-color: #2C3E50 !important;
+    opacity: 1;
+    border: 0 !important;
+    
+  }
+
+  /* size of circle */
+  .input {
+    width: 20px;
+    height: 20px;
+    background-color: #2C3E50;
+    position: relative;
+    border-radius: 50%;
+  }
+  .input:hover {
+    cursor: pointer;
+  }
+
+  /* 'lines' before and after
+  .input::before, .input::after{
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #2C3E50;
+    width: 4vw;
+    height: 5px;
+    max-width: 50px;
+  }
+  */
+
+  /* changes the length of the timeline string
+  .input::before {
+    left: 2vw;
+  }
+  .input::after {
+    right: 2vw;
+  }
+  */
+
+  /* contents above and below */
+  .input span {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+  }
+  
+  .input span::before, .input span::after {
+    visibility: visible;
+    position: absolute;
+    left: 50%;
+  }
+
+  .input span::after {
+    content: attr(data-year);
+    top: 25px;
+    transform: translateX(-50%);
+    font-size: 14px;
+  }
+  .input span::before {
+    content: attr(data-info);
+    display: inline-block;
+    top: -65px;
+    left: -25px;
+    width: 50px;
+    height: 20px;
+    font-size: 11.5px;
+    word-wrap: break-word;
+    text-align: center;
+  }
+  
+  @media (min-width: 1250px) {
+    /*
+    .input::before {
+      left: -10.5px;
+    }
+  
+    .input::after {
+      right: -30.5px;
+    }
+    */
+  }
+  @media (max-width: 950px) {
+    .input {
+      width: 17px;
+      height: 17px;
+    }
+    .input span::before{
+      font-size: 10px;
+      width: 45px;
+      top: -55px;
+    }
+  }
+  @media (max-width: 750px) {
+
+    .input-line{
+      visibility: hidden;
+    }
+
+    .flex-parent {
+      justify-content: initial;
+    }
+  
+    .input-flex-container {
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+      height: auto;
+      margin-top: 15vh;
+    }
+  
+    .input {
+      width: 70px;
+      height: 70px;
+      margin: 0 10px 50px;
+      background-color: #AEB6BF;
+    }
+    .input span {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .input span::before {
+      top: 75px;
+      transform: translateX(83%);
+      text-indent: 0;
+      text-align: center;
+    }
+    .input span::after {
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: #ECF0F1;
+    }
+  
+    /*
+    .description-flex-container {
+      margin-top: 30px;
+      text-align: center;
+    }
+    */
+  }
+  @media (max-width: 400px) {
+    body {
+      min-height: 950px;
+    }
+  }
