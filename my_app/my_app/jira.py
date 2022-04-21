@@ -19,6 +19,7 @@ def scrape(request):
 
     #Call function to get custom fields
     for url in urls:
+        print(url)
         response = getResponse(url)
         data = response.json()
 
@@ -36,6 +37,7 @@ def scrape(request):
 
 
         getDate(key, url, key2, key3)
+
             
 
     return HttpResponse("""<html><script>window.location.replace('/jira');</script></html>  """)
@@ -60,6 +62,24 @@ def getDate(key, url, key2, key3):
 
     #Send to JSON file or from here use function to use contents
 
+def toJSON(name, key, kickoff, start, due):
+    print(name + key + kickoff + start + due)
+
+    data = {
+        "Project Name": name,
+        "Project Key": key,
+        "Schedule": {
+            "Kickoff Date": kickoff,
+            "Start Date": start,
+            "Due Date": due
+        }
+    }
+
+    json_data = json.dumps(data)
+
+    with open('schedule.json', 'w') as outfile:
+        json.dump(json_data, outfile)
+
 
 def schedule(request):
     data = ""
@@ -83,7 +103,7 @@ def getResponse(url):
     response = ''
     while response == '':
         try:
-            response = requests.get(url,headers=headers,params=query,auth=("psu_capstone@4gclinical.com", "4GZxvE0wLp1WRJG3Wsxq59D7"))
+            response = requests.get(url,headers=headers,auth=("psu_capstone@4gclinical.com", "API_TOKEN"))
             return response
         except:
             print("Connection refused by server..")
