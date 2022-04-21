@@ -1,7 +1,22 @@
 {% extends 'account/base.html' %}
 
 {% block content %}
+
+
     <div class="text-center">
         <h2>Jira Implementation</h2>
     </div>
+    
+    <!--loads timeline-->
+    {% load static %}
+    <link rel="stylesheet" href="/static/timeline/timeline.css">
+    <script src="/static/timeline/timeline.js" defer></script>
+    {% include 'html_objects/timeline.html' %}
+
+    <!--loads searchbar-->
+
+    {% include 'html_objects/search.html' %}
+
+
 {% endblock %}
+
