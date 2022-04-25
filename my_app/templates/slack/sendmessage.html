@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>4G Clinical Slack POST Test Page</title>
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+
+</head>
+
+<body id="home" style="background-color:#1a1a1a; color:#a6a6a6">
+
+<style>
+h1 { 
+color: #6d9eeb;
+font-weight: bold ;
+font-family: 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
+}
+
+</style>
+
+<br>
+<br>
+	<h1>&nbsp;&nbsp;&nbsp;4G Clinical Slack POST Test Page</h1>
+
+<br>
+<br>
+
+<form action="http://127.0.0.1:8000/slack/sendmessage" method="POST">
+
+    <label for="message">Enter a message to post on Slack:<br></label>
+    <input name="message" id="message" value="enter any string">
+    <button>Send</button>
+    
+</form>
+
+
+</body>
+</html>
+
+
+<!--
+
+    <input type="submit" value="Send" class="submit-btn" />
+
+
+
+-->
