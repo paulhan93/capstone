@@ -27,5 +27,7 @@ urlpatterns = [
     path('jira/', TemplateView.as_view(template_name='dashboard/jira.html'), name='Jira'),
     path('slack/', TemplateView.as_view(template_name='dashboard/slack.html'), name='Slack'),
     path('accounts/', include('allauth.urls')),
+    path('RESTexamples/', include('RESTexamples.urls')),
+    path('slack/', include('slack.urls')),
     #path('logout', LogoutView.as_view()),
 ]
