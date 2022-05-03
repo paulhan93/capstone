@@ -1,0 +1,156 @@
+{
+    "Projects": [
+        {
+            "Project Name": "Bayer",
+            "Project Key": "BAYER",
+            "Schedule": {
+                "Contract Executed Date": "2021-11-12",
+                "Kickoff Date": "2022-02-07",
+                "Spec Sign Off": "2022-03-04",
+                "Smoke Testing Start": "2022-03-07",
+                "Smoke Testing Complete": "2022-03-11",
+                "Validation Start": "2022-03-14",
+                "Validation Complete": "2022-04-01",
+                "UAT Start": "2022-04-04",
+                "UAT Complete": "2022-04-08",
+                "GoLive": "2022-04-15",
+                "FPI": null,
+                "Start Date": "2022-02-07",
+                "Due Date": "2022-04-15"
+            }
+        },
+        {
+            "Project Name": "Apellis",
+            "Project Key": "APELLIS",
+            "Schedule": {
+                "Contract Executed Date": null,
+                "Kickoff Date": "2021-12-06",
+                "Spec Sign Off": "2021-12-16",
+                "Smoke Testing Start": null,
+                "Smoke Testing Complete": null,
+                "Validation Start": "2022-01-03",
+                "Validation Complete": "2022-01-07",
+                "UAT Start": "2022-01-10",
+                "UAT Complete": "2022-01-14",
+                "GoLive": "2022-01-31",
+                "FPI": null,
+                "Start Date": "2021-11-22",
+                "Due Date": "2022-01-31"
+            }
+        },
+        {
+            "Project Name": "Biocryst",
+            "Project Key": "BIOCRYST",
+            "Schedule": {
+                "Contract Executed Date": "2021-07-30",
+                "Kickoff Date": "2022-01-24",
+                "Spec Sign Off": "2022-02-18",
+                "Smoke Testing Start": "2022-02-21",
+                "Smoke Testing Complete": "2022-02-25",
+                "Validation Start": "2022-03-07",
+                "Validation Complete": "2022-03-18",
+                "UAT Start": "2022-03-21",
+                "UAT Complete": "2022-03-25",
+                "GoLive": "2022-04-01",
+                "FPI": null,
+                "Start Date": "2022-01-24",
+                "Due Date": "2022-03-18"
+            }
+        },
+        {
+            "Project Name": "Arrowhead",
+            "Project Key": "ARROWHEAD",
+            "Schedule": {
+                "Contract Executed Date": null,
+                "Kickoff Date": "2022-02-02",
+                "Spec Sign Off": "2022-02-25",
+                "Smoke Testing Start": "2022-02-28",
+                "Smoke Testing Complete": "2022-03-04",
+                "Validation Start": "2022-03-09",
+                "Validation Complete": "2022-03-23",
+                "UAT Start": "2022-03-24",
+                "UAT Complete": "2022-03-30",
+                "GoLive": "2022-04-06",
+                "FPI": null,
+                "Start Date": "2022-02-08",
+                "Due Date": "2022-04-06"
+            }
+        },
+        {
+            "Project Name": "Biosight",
+            "Project Key": "BIOSIGHT",
+            "Schedule": {
+                "Contract Executed Date": "2021-01-15",
+                "Kickoff Date": "2021-01-25",
+                "Spec Sign Off": "2021-02-22",
+                "Smoke Testing Start": null,
+                "Smoke Testing Complete": null,
+                "Validation Start": null,
+                "Validation Complete": "2021-03-05",
+                "UAT Start": "2021-03-08",
+                "UAT Complete": null,
+                "GoLive": "2021-08-25",
+                "FPI": "2021-09-01",
+                "Start Date": "2021-01-25",
+                "Due Date": "2021-03-17"
+            }
+        },
+        {
+            "Project Name": "Biontech",
+            "Project Key": "BIONTECH",
+            "Schedule": {
+                "Contract Executed Date": "2021-10-29",
+                "Kickoff Date": "2021-11-05",
+                "Spec Sign Off": "2021-11-29",
+                "Smoke Testing Start": null,
+                "Smoke Testing Complete": null,
+                "Validation Start": "2021-12-06",
+                "Validation Complete": "2021-12-17",
+                "UAT Start": "2022-01-12",
+                "UAT Complete": "2022-02-04",
+                "GoLive": "2022-03-10",
+                "FPI": "2022-03-22",
+                "Start Date": "2021-11-05",
+                "Due Date": "2022-01-12"
+            }
+        },
+        {
+            "Project Name": "Blueprint",
+            "Project Key": "BLUEPRINT",
+            "Schedule": {
+                "Contract Executed Date": null,
+                "Kickoff Date": "2022-01-20",
+                "Spec Sign Off": "2022-02-04",
+                "Smoke Testing Start": "2022-02-07",
+                "Smoke Testing Complete": "2022-02-11",
+                "Validation Start": "2022-02-14",
+                "Validation Complete": "2022-02-25",
+                "UAT Start": "2022-02-28",
+                "UAT Complete": "2022-03-08",
+                "GoLive": "2022-03-11",
+                "FPI": "2022-03-31",
+                "Start Date": "2022-01-17",
+                "Due Date": "2022-03-11"
+            }
+        },
+        {
+            "Project Name": "Cancerinsight",
+            "Project Key": "CANCERINSI",
+            "Schedule": {
+                "Contract Executed Date": "2021-11-19",
+                "Kickoff Date": "2022-02-21",
+                "Spec Sign Off": "2022-03-18",
+                "Smoke Testing Start": "2022-03-23",
+                "Smoke Testing Complete": "2022-03-25",
+                "Validation Start": "2022-03-28",
+                "Validation Complete": "2022-04-08",
+                "UAT Start": "2022-04-11",
+                "UAT Complete": "2022-04-15",
+                "GoLive": "2022-04-22",
+                "FPI": "2022-04-29",
+                "Start Date": "2022-02-21",
+                "Due Date": "2022-04-22"
+            }
+        }
+    ]
+}
