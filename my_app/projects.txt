@@ -1,3 +1,8 @@
-https://qa-4gclinical.atlassian.net/rest/api/3/issue/BAYER-2049/editmeta
-https://qa-4gclinical.atlassian.net/rest/api/3/issue/APELLIS-992/editmeta
-https://qa-4gclinical.atlassian.net/rest/api/3/issue/BIOCRYST-278/editmeta
+https://qa-4gclinical.atlassian.net/rest/api/3/issue/BAYER-2049/
+https://qa-4gclinical.atlassian.net/rest/api/3/issue/APELLIS-992/
+https://qa-4gclinical.atlassian.net/rest/api/3/issue/BIOCRYST-278/
+https://qa-4gclinical.atlassian.net/rest/api/3/issue/ARROWHEAD-574/
+https://qa-4gclinical.atlassian.net/rest/api/3/issue/BIOSIGHT-1/
+https://qa-4gclinical.atlassian.net/rest/api/3/issue/BIONTECH-156/
+https://qa-4gclinical.atlassian.net/rest/api/3/issue/BLUEPRINT-666/
+https://qa-4gclinical.atlassian.net/rest/api/3/issue/CANCERINSI-86/
