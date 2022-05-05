@@ -118,8 +118,11 @@ html, body {
   .input span::after {
     content: attr(data-year);
     top: 25px;
-    transform: translateX(-50%);
-    font-size: 14px;
+    transform: translateX(-42%);
+    width: 50px;
+    font-size: 13px;
+    text-align: center;
+    
   }
   .input span::before {
     content: attr(data-info);

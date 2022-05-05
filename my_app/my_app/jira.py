@@ -57,9 +57,10 @@ def getDate(key, url, key2, key3):
     #Prints all the data
     print(name + " " + proj_key)
     #print(kickoff + " " + start + " " + due)
+    #print(name + " " + kickoff + " " + start )
 
     #Send to JSON file or from here use function to use contents
-
+    
 
 def schedule(request):
     data = ""
@@ -83,7 +84,7 @@ def getResponse(url):
     response = ''
     while response == '':
         try:
-            response = requests.get(url,headers=headers,params=query,auth=("psu_capstone@4gclinical.com", "4GZxvE0wLp1WRJG3Wsxq59D7"))
+            response = requests.get(url,headers=headers,params=query,auth=("psu_capstone@4gclinical.com", "uMQ06ygSo2idk9No6jjn06CD"))
             return response
         except:
             print("Connection refused by server..")

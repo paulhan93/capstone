@@ -18,6 +18,7 @@ from django.urls import path, include
 from django.views.generic import TemplateView
 
 from . import jira
+from . import test
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,6 +26,8 @@ urlpatterns = [
     path('jira/', TemplateView.as_view(template_name='dashboard/jira.html'), name='Jira'),
     path('slack/', TemplateView.as_view(template_name='dashboard/slack.html'), name='Slack'),
     path('accounts/', include('allauth.urls')),
-    path("jira/scrape", jira.scrape)
+    path("jira/scrape", jira.scrape),
+    path("jira/test", test.index),
+    path('timelinetest/', TemplateView.as_view(template_name='html_objects/timelinetest.html'), name='timelinetest'),
     #path('logout', LogoutView.as_view()),
 ]
