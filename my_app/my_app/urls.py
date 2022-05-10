@@ -24,6 +24,7 @@ from . import jira
 urlpatterns = [
     path('admin/', admin.site.urls),
     #path('', TemplateView.as_view(template_name="index.html")),
+    path('index/', TemplateView.as_view(template_name='dashboard/index.html'), name='index'),
     path('home/', TemplateView.as_view(template_name='dashboard/home.html'), name='home'),
     path('jira/', TemplateView.as_view(template_name='dashboard/jira.html'), name='Jira'),
     path('slack/', TemplateView.as_view(template_name='dashboard/slack.html'), name='Slack'),
