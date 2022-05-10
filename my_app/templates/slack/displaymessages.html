@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>4G Clinical Slack Message Widget Test Page</title>
+	<!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+
+<body id="home" style="background-color:#FFFFFF; color:#a6a6a6">
+
+<style>
+h1 { 
+color: #6d9eeb;
+font-weight: bold ;
+font-family: 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
+}
+div.scroll {
+                margin:4px, 4px;
+                padding:4px;
+                background-color: lightslategray;
+                width: 500px;
+                height: 110px;
+                overflow-x: hidden;
+                overflow-y: auto;
+                text-align:justify;
+            }
+</style>
+
+<br>
+<br>
+	<h1>&nbsp;&nbsp;&nbsp;4G Clinical Slack Display Messages Test Page</h1>
+
+<br>
+<br>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+   
+   $('#content').load("get_formatted_messages/");
+
+});
+</script>
+<div id="content" style="margin:4px, 4px; padding:20px; width: 550px; height: 200px; overflow-x: hidden; overflow-y: auto; text-align:justify"></div>
+
+<br>
+
+
+<form action="sendmessage/" method="POST">
+
+    <label for="message">Enter a message to post on Slack:<br></label>
+    <input name="message" id="message" value="enter any string">
+    <button>Send</button>
+    
+</form>
+
+
+
+</body>
+</html>
+
+
+<!--
+
+
+JAVASCRIPT TEST CODE FOR TRYING TO GET THE WINDOW TO AUTOSCROLL TO THE BOTTOM:
+   $(document).scrollTop($(document).height());
+
+   $("#content").animate({ scrollTop: $("#content")[0].scrollHeight}, 1000);
+
+   $('#content').scrollTop($('#content')[0].scrollHeight);
+   d = $('#content'); $(d).scrollTop( $(d).prop("scrollHeight") );
+
+WORKING IFRAME:
+
+<div class="messages">
+    <iframe src="get_formatted_messages/" width="600" height="200" align="left" style="padding:20px; border: 1px blue"> </iframe>
+</div>
+
+WORKING SCRIPT:
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+   
+   $('#content').load("get_formatted_messages/");
+
+});
+</script>
+<div id="content" style="margin:4px, 4px; padding:20px; width: 550px; height: 110px; overflow-x: hidden; overflow-y: auto; text-align:justify"></div>
+
+
+MISCELLANEOUS:
+
+http://127.0.0.1:8000/slack/get_formatted_messages/
+    <input type="submit" value="Send" class="submit-btn" />
+
+
+
+-->
