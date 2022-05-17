@@ -36,6 +36,7 @@ def sendmessage(request):
   return HttpResponse("You submitted: \"" + str + "\"")
 
 def get_formatted_messages(request):
+  channel_enum = ''
   try:
     channel_enum = request.GET["channel"]
   except:

@@ -4,6 +4,13 @@
 	<meta charset="utf-8">
 	<title>4G Clinical Slack Message Widget Test Page</title>
 	<!-- <link rel="stylesheet" href="css/style.css"> -->
+
+    <!-- Google fonts accessibility commands:-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+     
+
 </head>
 
 <body id="home" style="background-color:#FFFFFF; color:#a6a6a6">
@@ -32,25 +39,11 @@ span.slack_username {
     font-family: 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
 }
 
-span.slack_date {
-    color: #333333;
-    font-size: 1em;
-    font-weight: bold;
-    font-family: 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
-}
-
-span.slack_time {
-    color: #333333;
-    font-size: 1em;
-    font-weight: bold;
-    font-family: 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
-}
-
 span.slack_date_time {
     color: #333333;
     font-size: 1em;
     font-weight: bold;
-    font-family: 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
+    font-family: 'Roboto', 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
 }
 
 span.slack_message {
@@ -78,8 +71,10 @@ div.content{
 }
 
 
-
 </style>
+
+
+
 
 <br>
 <br>
@@ -92,7 +87,7 @@ div.content{
 <script>
 $(document).ready(function(){
    
-   $('#content').load("get_formatted_messages/");
+   $('#content').load("get_formatted_messages");
 
 });
 
@@ -124,7 +119,6 @@ $(document).ready(function(){
 
 <div class="content" id="content"></div>
 
-
 <div class="float_elements">  
 <select id="channel">
     <option value="0">general</option>
@@ -132,7 +126,7 @@ $(document).ready(function(){
 </select>
 <button onclick="reload_channel()">load</button>
 </div><div class="float_elements"> 
-<form action="sendmessage/" method="POST">
+<form action="sendmessage" method="POST">
 <label for="message">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
 <input name="message" id="message" value="enter any string">
 <button>Send</button></form>

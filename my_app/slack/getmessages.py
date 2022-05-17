@@ -6,10 +6,12 @@ import json
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
+slack_html = ''
 
 def getmessage(select):
 
-    html = ''
+    global slack_html
+    slack_html = ''
 
     # Obscure the token
     us7 = '25d9654e572ecfcf7f917baf48b8b99'
@@ -37,13 +39,13 @@ def getmessage(select):
     conversation_history = []
     # ID of the channel you want to send the message to
 
-    match select:
-        case '0':
-            channel_id = channel_id_general # General
-        case '1':
-            channel_id = channel_id_random # Random
-        case _: 
-            channel_id = channel_id_general
+    if select == '0':
+        channel_id = channel_id_general # General
+    elif select == '1':
+        channel_id = channel_id_random # Random
+    else: 
+        channel_id = channel_id_general
+
 
     try:
         # Call the conversations.history method using the WebClient
@@ -113,7 +115,7 @@ def getmessage(select):
             dt = datetime.fromtimestamp(timestamp)
             str_date = dt.strftime('%Y-%m-%d %I:%M %p')
 
-            html = build_html(html, slack_username, str_date, hyperlink, video_html, text)
+            build_html(slack_username, str_date, hyperlink, video_html, text)
 
             # Cleanup:
             type = ''
@@ -129,18 +131,19 @@ def getmessage(select):
             text = 'IndexError Exception occurred in getmessage().'
             break
     
-    return html
+    return slack_html
 
 
-def build_html(html, str_name, str_date, str_hyperlink, str_video_html, str_text):
-    html += str_name + ' ' + str_date + '<br>'
-    if str_hyperlink:
-        html += '<a href="' + str_hyperlink + '" target=_blank>' + str_hyperlink + '</a><br>'
-    if str_video_html:
-        html += str_video_html + '<br>'
+def build_html(str_name, str_date, str_hyperlink, str_video_html, str_text):
+    global slack_html
+    slack_html += str_name + ' <span class="slack_date_time">' + str_date + '</span><br>'
     if str_text:
-        html += str_text + '<br>'
-    return html
+        slack_html += str_text + '<br>'
+    if str_hyperlink:
+        slack_html += '<a href="' + str_hyperlink + '" target=_blank>' + str_hyperlink + '</a><br>'
+    if str_video_html:
+        slack_html += str_video_html + '<br>'
+
 
 
 # Old working function for getting the raw JSON message data
