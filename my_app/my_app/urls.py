@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic import TemplateView
 from . import jira
-from . import test
+from . import issues
 
 #from django.contrib.auth.views import LogoutView
 #from hello.views import index
@@ -30,7 +30,7 @@ urlpatterns = [
     path('slack/', TemplateView.as_view(template_name='dashboard/slack.html'), name='Slack'),
     path('accounts/', include('allauth.urls')),
     path("jira/scrape", jira.scrape),
-    path("jira/test", test.index),
+    path("jira/issues", issues.index),
     path('timelinetest/', TemplateView.as_view(template_name='html_objects/timelinetest.html'), name='timelinetest'),
     path('RESTexamples/', include('RESTexamples.urls')),
     path('slack/', include('slack.urls')),
