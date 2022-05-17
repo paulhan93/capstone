@@ -1,3 +1,4 @@
+//import calendar function below
 import * as timeline from "/static/timeline/timeline.js"
 
 
@@ -12,10 +13,10 @@ function onClick(){
   
       function checkIndex(event){
         let idx = Array.from(startButton).indexOf(event.target)
-        //add more calendar function below
+        //add calendar function below
         timeline.timelineFunction(idx)
       }
   }
 
-//calls onclick
+//onClick function listens and returns the index of the list item
 onClick()
