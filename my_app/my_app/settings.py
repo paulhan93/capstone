@@ -163,3 +163,6 @@ LOGIN_REDIRECT_URL = 'index'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'   
 
 #ACCOUNT_LOGOUT_REDIRECT_URL = 'login'
+
+# Command to allow HTML iframes on the site:
+X_FRAME_OPTIONS = 'SAMEORIGIN'
