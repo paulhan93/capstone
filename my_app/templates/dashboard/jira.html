@@ -10,12 +10,14 @@
     <!--loads timeline-->
     {% load static %}
     <link rel="stylesheet" href="/static/timeline/timeline.css">
-    <script src="/static/timeline/timeline.js" defer></script>
+    <script type="module" src="/static/timeline/timeline.js" defer></script>
     {% include 'html_objects/timeline.html' %}
 
-    <!--loads searchbar-->
-
-    {% include 'html_objects/search.html' %}
+    <!--loads dropdown-->
+    {% load static %}
+    <link rel="stylesheet" href="/static/dropdown/dropdown.css">
+    <script type="module" src="/static/dropdown/dropdown.js" defer></script>
+    {% include 'html_objects/dropdown.html' %}
 
 
 {% endblock %}

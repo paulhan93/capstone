@@ -25,6 +25,11 @@ SECRET_KEY = 'django-insecure-cfd+h%1tai075fxrew8x9foq!d1x@c0n2p5qntbqs(#w4%qh%&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+#for javascript export importing
+if DEBUG:
+    import mimetypes
+    mimetypes.add_type("application/javascript", ".js", True)
+
 ALLOWED_HOSTS = ['*',]
 
 
@@ -47,6 +52,8 @@ INSTALLED_APPS = [
     'RESTexamples',
     'slack',
     'crispy_forms',
+
+
 ]
 
 MIDDLEWARE = [
