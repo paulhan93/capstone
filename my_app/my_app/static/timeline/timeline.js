@@ -15,15 +15,14 @@ function changeCircleColor() {
     Dec: 12,
   };
   Object.freeze(enum_Months);
-  //let month= enum_Months.Dec;
-  //console.log(month);
+
 
   //todays date
   let dateMillSeconds = Date.now();
   let date = new Date(dateMillSeconds);
   let todaysDate =
     date.getMonth() + 1 + " " + date.getDate() + " " + date.getFullYear();
-  //console.log(todaysDate);
+
 
   //date extracted from 4g timeline + target color change
   const theDiv = document.getElementById("input-flex-container");
@@ -48,8 +47,6 @@ function changeCircleColor() {
       let temp2 = enum_Months[timelineSplit[0]];
       timelineSplit[0] = String(temp2);
     }
-    //console.log(timelineSplit);
-    //console.log(todaySplit);
 
     //change color based on comparisons on date
     if (timelineSplit != "None") {
@@ -87,8 +84,8 @@ function changeCircleColor() {
   }
 }
 
-//function to pull from json file
-function timelineScrape(var1) {
+//replaces dates with values from schedule file
+function timelineScrape(index) {
   let arr = [];
 
   //enum for months
@@ -111,8 +108,8 @@ function timelineScrape(var1) {
   fetch("http://127.0.0.1:8000/jira/issues")
     .then((response) => response.json())
     .then((data) => {
-      //grabs data from bayer
-      arr = data.schedule.Projects[Number(`${var1}`)].Schedule;
+      //grabs data from index
+      arr = data.schedule.Projects[Number(`${index}`)].Schedule;
 
       const theContainer = document.getElementById("input-flex-container");
       for (let i = 0; i < theContainer.children.length; i++) {
@@ -160,11 +157,11 @@ function changeLineColor(){
   }
 }
 
-//function calls with promises
-function a(var1) {
+//ensure functions run sequentially
+function a(index) {
   return new Promise(function (resolve) {
     setTimeout(function () {
-      timelineScrape(var1);
+      timelineScrape(index);
       resolve();
     }, 50);
   });
@@ -192,12 +189,13 @@ function c() {
 
 
 
-//combines all the functions 
-export function timelineFunction(var1){
-a(var1)
+//calls promised based functions
+export function timelineFunction(index){
+a(index)
   .then(b)
   .then(c)
 }
+
 
 
 
