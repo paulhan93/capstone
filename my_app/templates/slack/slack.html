@@ -78,20 +78,6 @@ span.slack_hyperlink {
     word-spacing: normal;
 }
 
-div.float_elements {
-  display: inline-block;
-  width: 275px;
-  height: 60px;
-  background: #212529;  
-}
-
-div.channel_select {
-  display: inline-block;
-  width: 275px;
-  height: 60px;
-  background: #444444;  
-}
-
 div.send_message {
   display: inline-block;
   width: 275px;
@@ -99,31 +85,35 @@ div.send_message {
   background: #444444;  
 }
 
-
 div.content{
     margin:4px, 4px; 
-    padding:0px;        /* This pads outside the div */
+    padding: 0px;        /* This pads outside the div */
     width: 550px; 
     height: 300px; 
     overflow-x: hidden; 
     overflow-y: auto; 
+
 }
 
-div.gradient {
+div.gradient_title {
     width: 550px; 
     height: 4.7rem; 
     background-color: #FFFFFF; 
     background-image: linear-gradient(to right, #611f69, #3b183f); 
-    /* Slack official purple: #611f69
-    Teal: #1EA1A1
-    */
+}
+
+div.gradient_toolbar {
+    width: 550px; 
+    height: 6rem; 
+    background-color: #FFFFFF; 
+    background-image: linear-gradient(to right, #611f69, #3b183f); 
 }
 
 .logo {
-    position:absolute;
-    top: 2.8rem;
+    position: absolute;
+    top: 0.6rem;
     left: 25px;
-    z-index: 2;
+    z-index: 3;
 }
 
 .text_bubble {
@@ -134,12 +124,13 @@ div.gradient {
     margin-left: 1rem;
     margin-right: 1rem;
     display: inline-block;
+    z-index: -1;
 }
 
 .channel_title_div {
     display: inline-block;
     height: 5.35rem;
-    width: 30rem;
+    width: 33rem;
     position: absolute;
     top: 2.75rem;
     left: 25px;
@@ -153,48 +144,160 @@ div.gradient {
     font-size: 2.55rem;
     font-family: 'Lato', 'Quicksand', 'Arial', 'Geneva', 'Helvetica', sans-serif;
     font-weight: 900;
-    margin-top:80px;
-    position:absolute;
+    /*margin-top: 3rem; */
+    /* position:absolute; */
     bottom:0;
     right:0;
 }
 
-
-
+/* Button code: */
 .pushable {
     background: #eeb700;
-    border-radius: 12px;
+    border-radius: 1.2rem;
     border: none;
-    padding: 0;
+    padding: 0px;
     cursor: pointer;
-    outline-offset: 4px;
-  }
-  .front {
+    outline-offset: 0.4rem;
+}
+
+.front {
     display: block;
-    padding: 12px 42px;
-    border-radius: 12px;
-    font-size: 1.25rem;
+    padding: 0.6rem 1.4rem;
+    border-radius: 1.2rem;
+    font-size: 0.8rem;
     background: #ffbb00;
     color: white;
     transform: translateY(-6px);
     /* Yellow A: #ffcc00 Yellow B: #ffc200 Yellow C: #ffbb00 */
-  }
+}
 
-  .pushable:active .front {
+.pushable:active .front {
     transform: translateY(-2px);
-  }
+}
 
+  /* Div container for select and send message divs*/
+div.container_fixed_px {
+    width: 550px; 
+    height: 4.7rem; 
+    margin: auto;
+}
 
+div.float_left {
+    width: 26%;
+    height: 4.7rem;
+    float: left;
+    text-align: center;
+    padding-top: 0.3rem;
+}
 
+div.float_right {
+    margin-left: 26%;
+    height: 4.7rem;
+}
+    /* End div splitting solution */
 
+/* Styling for the drop down menu */
+input[type=dropdown], select {
+  width: 7rem;
+  padding: 0.2 0.4rem;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
+textarea {
+    width: 17rem;
+    height: 4.9rem; 
+    margin: 0.4rem 0; /* vert and horizontal margins */
+    padding: 0.4rem 1rem;
+    border-radius: 10px;
+    box-sizing: border-box;
+    resize: none;
+}
 
+.container_flex {
+    width: 400px; 
+    display: flex;
+}
 
+.fixed {
+    width: 5rem;
+    height: 3.2rem;
+    padding: 1rem 1rem;
+    display: table; 
+    text-align: center;
+}
+
+.fixed_button {
+    display: table-cell; 
+    vertical-align: bottom;
+}
+
+.flex-item {
+    flex-grow: 1;
+}
+
+.fit_to_content {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 5px;
+  vertical-align: middle;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(155, 155, 155, 0.5);
+  border-radius: 20px;
+  border: transparent;
+}
+
+div.container_form {
+    width: 400px; 
+    height: 6rem; 
+    margin: auto;
+}
+
+div.form_float_left {
+    width: 70%;
+    height: 6rem;
+    float: left;
+}
+
+div.form_float_right {
+    margin-left: 70%;
+    height: 6rem;
+}
+
+/*
+.button {
+  display: inline-block;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #ffbb00;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #eeb700;
+}
+
+.button:active {
+  background-color: #ffbb00;
+  box-shadow: 0 5px #eeb700;
+  transform: translateY(4px);
+}
+*/
 </style>
-
-<br>
-<br>
-
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -204,7 +307,7 @@ $(document).ready(function(){
     $('#content').load("get_formatted_messages/?channel=0"); /* Load Channel 0 (General) as default */
 
     const channel_title = document.getElementById("channel_title");
-    channel_title.textContent = "#general";
+    channel_title.textContent = "#Janssen-5607";
 
 });
 
@@ -216,68 +319,80 @@ $(document).ready(function(){
         
         switch(channelVal) {
             case '0':
-                alert("You selected" + channelStr + ": " + channelVal);
                 $('#content').load("get_formatted_messages/?channel=0");
                 const channel_title0 = document.getElementById("channel_title");
-                channel_title0.textContent = "#general";
+                channel_title0.textContent = "#Janssen-5607";
+                /* Testing print: alert("You selected" + channelStr + ": " + channelVal); */
                 break;
             case '1':
-                alert("You selected" + channelStr + ": " + channelVal);
                 $('#content').load("get_formatted_messages/?channel=1");
                 const channel_title1 = document.getElementById("channel_title");
-                channel_title1.textContent = "#random";
+                channel_title1.textContent = "#Janssen-6613";
+                break;
+            case '2':
+                $('#content').load("get_formatted_messages/?channel=2");
+                const channel_title2 = document.getElementById("channel_title");
+                channel_title2.textContent = "#Janssen-7248";
                 break;
             default:
         }
         return;
     }
 
+    function send_messagef() 
+    {
+        m = document.getElementById("textarea_message").value;
+        $.post(sendmessage,{message: m});
+        document.getElementById("textarea_message").value = "";       
+        return;
+    }
+
+    function clear_form()
+    {
+        document.getElementById("textarea_message").value = "";
+        return;
+    }
+
 </script>
+
+
+
 
 <!-- <span class="title">4G Clinical Slack Display Messages Test Page</span> -->
 {% load static %}
-<div class="gradient"><img src="{% static 'images/slack_logo.svg'%}" width="200" class="logo"><div 
-    class="channel_title_div"><span 
-        class="channel_title" id="channel_title">oogabooga</span></div></div>
+<div class="gradient_title"><img src="{% static 'images/slack_logo.svg'%}" width="200" class="logo"><div 
+    class="channel_title_div"><span class="channel_title" id="channel_title">default no title</span></div></div>
 
 <div class="content" id="content"></div>
 
-<div class="gradient"><div class="float_elements">  
-    <select id="channel">
-        <option value="0">#general</option>
-        <option value="1">#random</option>
+<div class="gradient_toolbar"><div class="container_fixed_px">
+    
+    <div class="float_left">&nbsp; 
+    <select id="channel" type="dropdown" class="select_channel">
+        <option value="0">#janssen-5607</option>
+        <option value="1">#janssen-6613</option>
+        <option value="2">#janssen-7248</option>
     </select>
-    <button onclick="reload_channel()">load</button>
-    </div><div class="float_elements"> 
-    <form action="sendmessage" method="POST">
-    <label for="message">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-    <input name="message" id="message" value="enter any string">
-    <button class="pushable"><span class="front">send</span></button></form></div></div>
+  
+    <button class="pushable" onclick="reload_channel()"><span class="front">load</span></button>
 
+    </div>
+    
+    <div class="float_right"><div class="container_form">
+        <div class="form_float_left">
+            <form action="sendmessage" method="POST" target="dummyframe" id="send_message">                  
+            <textarea form="send_message" id="textarea_message" name="message"></textarea>
+            </form>          
+        </div>
+        <div class="form_float_right">
+            <div class="fixed"><div class="fixed_button">
+                <button form="send_message" class="pushable" onclick="send_messagef()"><span class="front">send</span></button></div></div>
+        </div>
+    </div></div>
 
+</div></div>
 
-<div class="float_elements">  
-<select id="channel">
-    <option value="0">#general</option>
-    <option value="1">#random</option>
-</select>
-<button onclick="reload_channel()">load</button>
-</div><div class="float_elements"> 
-<form action="DELETECAPSsendmessage" method="POST">
-<label for="message">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-<input name="message" id="message" value="enter any string">
-<button class="pushable"><span class="front">send</span></button></form>
-</div>
-
-<br>
-<br>
-<br>
-<button class="pushable">
-    <span class="front">
-      Push me
-    </span>
-  </button>
-
+<iframe name="dummyframe" id="dummyframe" style="display: none;"></iframe>
 
 </body>
 </html>
