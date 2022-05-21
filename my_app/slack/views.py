@@ -35,9 +35,11 @@ def sendmessage(request):
   webhooks = [ hook0_1 + hook0_2 + hook0_3 + hook0_4, hook1_1 + hook1_2 + hook1_3 + hook1_4, hook2_1 + hook2_2 + hook2_3 + hook2_4 ]
 
   str = request.POST["message"]
+  channel_id = request.POST["channelId"]
 
   for i in range(len(webhooks)):
-     send_message(str, webhooks[i])
+      send_message(str, webhooks[i])
+  
   return HttpResponse("")
 
   #return HttpResponseRedirect('/slack/sendmessage.html')

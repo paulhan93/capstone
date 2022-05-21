@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body id="home" style="background-color:#FFFFFF; color:#a6a6a6">
@@ -89,10 +90,10 @@ div.content{
     margin:4px, 4px; 
     padding: 0px;        /* This pads outside the div */
     width: 550px; 
-    height: 300px; 
+    height: 450px; 
     overflow-x: hidden; 
     overflow-y: auto; 
-
+    z-index: 2;
 }
 
 div.gradient_title {
@@ -111,7 +112,7 @@ div.gradient_toolbar {
 
 .logo {
     position: absolute;
-    top: 0.6rem;
+    top: 0.5rem;
     left: 25px;
     z-index: 3;
 }
@@ -124,7 +125,7 @@ div.gradient_toolbar {
     margin-left: 1rem;
     margin-right: 1rem;
     display: inline-block;
-    z-index: -1;
+    z-index: 2;
 }
 
 .channel_title_div {
@@ -134,7 +135,7 @@ div.gradient_toolbar {
     position: absolute;
     top: 2.75rem;
     left: 25px;
-    z-index: 2;
+    z-index: 1;
     text-align: right;
     bottom: 0;
 }
@@ -198,13 +199,18 @@ div.float_right {
 
 /* Styling for the drop down menu */
 input[type=dropdown], select {
-  width: 7rem;
-  padding: 0.2 0.4rem;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+    color: #eeeeee;
+    width: 8rem;
+    padding: 0.6 0.9rem;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #222222;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: #555555;
+    font-family: 'Noto Sans', 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
 }
 
 textarea {
@@ -215,6 +221,9 @@ textarea {
     border-radius: 10px;
     box-sizing: border-box;
     resize: none;
+    font-family: 'Noto Sans', 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
 }
 
 .container_flex {
@@ -341,8 +350,8 @@ $(document).ready(function(){
 
     function send_messagef() 
     {
-        m = document.getElementById("textarea_message").value;
-        $.post(sendmessage,{message: m});
+        m = document.getElementById("textarea_message").value;        
+        $.post("/slack/sendmessage", {message: m, channelId: 2}, function(data, status, xhr){  /* do nothing with response */ });
         document.getElementById("textarea_message").value = "";       
         return;
     }
@@ -379,10 +388,8 @@ $(document).ready(function(){
     </div>
     
     <div class="float_right"><div class="container_form">
-        <div class="form_float_left">
-            <form action="sendmessage" method="POST" target="dummyframe" id="send_message">                  
-            <textarea form="send_message" id="textarea_message" name="message"></textarea>
-            </form>          
+        <div class="form_float_left">                            
+            <textarea form="send_message" id="textarea_message" name="message"></textarea>                  
         </div>
         <div class="form_float_right">
             <div class="fixed"><div class="fixed_button">
