@@ -1,0 +1,35 @@
+th {
+  text-align: center;
+}
+
+tr {
+  height: 64px; 
+}
+
+td {
+  font-size: 8px; 
+  padding: 0px; 
+  margin: 0;
+  height: 64px; 
+  width: 64px;
+}
+
+ul {
+  margin: 0;
+  padding: 0px;
+  font-size: 10px;
+  text-align: center;
+}
+
+li {
+    display: block;
+}
+
+.calendar{
+  position: absolute;
+  bottom: 8em;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 448px;
+}

@@ -1,4 +1,4 @@
-/* import calendar module here */
+import * as calendar from "/static/calendar/calendar.js";
 import * as timeline from "/static/timeline/timeline.js";
 
 //checks which entry was clicked and returns the appropriate index
@@ -13,8 +13,8 @@ function onClick() {
     let index = Array.from(startButton).indexOf(event.target);
     let name = Array.from(startButton)[index].innerHTML
     changeTitle(name)
+    calendar.calendarFunction(index);
     timeline.timelineFunction(index);
-    /* insert calendar function here */
   }
 }
 
