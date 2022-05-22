@@ -18,7 +18,12 @@
     <link rel="stylesheet" href="/static/dropdown/dropdown.css">
     <script type="module" src="/static/dropdown/dropdown.js" defer></script>
     {% include 'html_objects/dropdown.html' %}
-
-
+    
+    <!--loads calendar-->
+    {% load static %}
+    <link rel="stylesheet" href="/static/calendar/calendar.css">
+    <script type="module" src="/static/calendar/calendar.js" defer></script>
+    {% include 'html_objects/calendar.html' %}
+    
 {% endblock %}
 
