@@ -76,16 +76,6 @@ def toJSON(kickoff,contract, spec, smoke_start, smoke_comp, val_S, val_comp, uat
     }
 
 
-    with open('schedule.json', 'r+') as file:
-        f_data = json.load(file)
-
-        f_data["Projects"].append(data)
-        file.seek(0)
-        json.dump(f_data, file, indent=4)
-
-        #If it doesnt then append
-        #print(f_data['Projects'][0]['Project Key'])
-
 def getResponse(url):
     headers = {
     "Accept": "application/json"
