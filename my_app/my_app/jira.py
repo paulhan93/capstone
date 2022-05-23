@@ -1,4 +1,4 @@
-from urllib import response
+from asyncio import constants
 from django.http import HttpResponse
 
 #Imports
@@ -13,38 +13,42 @@ import pandas as pd
 FLAG = 0
 
 def scrape(request):
+    #Assigned Projects
+    myProjects()
+    
+    #Other Projects
     
     #Open txt file that contains test projects and populate url array
-    urls = []
-    with open("./projects.txt", "r") as f:
-        for item in f:
-            temp = item.strip()
-            urls.append(temp)
+    # urls = []
+    # with open("./projects.txt", "r") as f:
+    #     for item in f:
+    #         temp = item.strip()
+    #         urls.append(temp)
 
 
-    # #Call function to get custom fields
-    for url in urls:
-        response = getResponse(url)
-        data = response.json()
+    # # #Call function to get custom fields
+    # for url in urls:
+    #     response = getResponse(url)
+    #     data = response.json()
 
-        #WORKS TO GET SCHEDULE FOR EACH PROJECT
-        kickoff = data['fields']['customfield_11768']
-        cont_exec_date = data['fields']['customfield_11624']
-        spec_sign_off = data['fields']['customfield_11770']
-        smoke_start = data['fields']['customfield_11886']
-        smoke_complete = data['fields']['customfield_11887']
-        val_start = data['fields']['customfield_11842']
-        val_complete = data['fields']['customfield_11771']
-        uat_start = data['fields']['customfield_11763']
-        uat_complete = data['fields']['customfield_11843']
-        golive = data['fields']['customfield_11765']
-        fpi = data['fields']['customfield_11766']
-        start = data['fields']['customfield_11654']
-        end = data['fields']['customfield_11772']
-        name = data['fields']['project']['name']
-        key = data['fields']['project']['key']
+    #     #WORKS TO GET SCHEDULE FOR EACH PROJECT
+    #     kickoff = data['fields']['customfield_11768']
+    #     cont_exec_date = data['fields']['customfield_11624']
+    #     spec_sign_off = data['fields']['customfield_11770']
+    #     smoke_start = data['fields']['customfield_11886']
+    #     smoke_complete = data['fields']['customfield_11887']
+    #     val_start = data['fields']['customfield_11842']
+    #     val_complete = data['fields']['customfield_11771']
+    #     uat_start = data['fields']['customfield_11763']
+    #     uat_complete = data['fields']['customfield_11843']
+    #     golive = data['fields']['customfield_11765']
+    #     fpi = data['fields']['customfield_11766']
+    #     start = data['fields']['customfield_11654']
+    #     end = data['fields']['customfield_11772']
+    #     name = data['fields']['project']['name']
+    #     key = data['fields']['project']['key']
 
-        toJSON(kickoff, cont_exec_date, spec_sign_off, smoke_start, smoke_complete, val_start, val_complete, uat_start, uat_complete,golive, fpi, start, end, name, key)
+    #     toJSON(kickoff, cont_exec_date, spec_sign_off, smoke_start, smoke_complete, val_start, val_complete, uat_start, uat_complete,golive, fpi, start, end, name, key)
 
     return HttpResponse("""<html><script>window.location.replace('/jira');</script></html>  """)
 
@@ -87,14 +91,10 @@ def getResponse(url):
     "Accept": "application/json"
     }
 
-    query = {
-        'total': '131'
-    }
-
     response = ''
     while response == '':
         try:
-            response = requests.get(url,headers=headers,auth=("psu_capstone@4gclinical.com", "API_KEY"))
+            response = requests.get(url,headers=headers,auth=("psu_capstone@4gclinical.com", "iwK4GNzvsNfg0hnGx2Vl492A"))
             return response
         except:
             print("Connection refused by server..")
@@ -103,22 +103,41 @@ def getResponse(url):
             print("Trying again")
             continue
 
+def myProjects():
+    url = "https://qa-4gclinical.atlassian.net/rest/api/3/search?jql=assignee=currentuser()"
+    response = getResponse(url)
 
-def customF():
-    url = 'https://qa-4gclinical.atlassian.net/rest/api/3/issue/BAYER-2049/'
-    response = getResponse(url)    
     data = response.json()
 
-    #print(data['fields']['customfield_11768'])
-    kickoff = data['fields']['customfield_11768']
-    spec_sign_off = data['fields']['customfield_11770']
-    smoke_start = data['fields']['customfield_11886']
-    smoke_complete = data['fields']['customfield_11887']
-    val_start = data['fields']['customfield_11842']
-    val_complete = data['fields']['customfield_11771']
-    uat_start = data['fields']['customfield_11763']
-    uat_complete = data['fields']['customfield_11843']
-    golive = data['fields']['customfield_11765']
-    fpi = data['fields']['customfield_11766']
-    start = data['fields']['customfield_11654']
-    due = data['fields']['duedate']
+    urls = []
+    for issue in data['issues']:
+        urls.append(issue['self'])
+    print(urls)
+
+    for url in urls:
+        response = getResponse(url)
+        data = response.json()
+
+        #WORKS TO GET SCHEDULE FOR EACH PROJECT
+        kickoff = data['fields']['customfield_11768']
+        cont_exec_date = data['fields']['customfield_11624']
+        spec_sign_off = data['fields']['customfield_11770']
+        smoke_start = data['fields']['customfield_11886']
+        smoke_complete = data['fields']['customfield_11887']
+        val_start = data['fields']['customfield_11842']
+        val_complete = data['fields']['customfield_11771']
+        uat_start = data['fields']['customfield_11763']
+        uat_complete = data['fields']['customfield_11843']
+        golive = data['fields']['customfield_11765']
+        fpi = data['fields']['customfield_11766']
+        start = data['fields']['customfield_11654']
+        end = data['fields']['customfield_11772']
+        name = data['fields']['project']['name']
+        key = data['fields']['project']['key']
+
+        print(kickoff , cont_exec_date)
+
+        #Send to JSON
+        toJSON(kickoff, cont_exec_date, spec_sign_off, smoke_start, smoke_complete, val_start, val_complete, uat_start, uat_complete,golive, fpi, start, end, name, key)
+
+
