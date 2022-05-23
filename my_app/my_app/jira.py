@@ -84,7 +84,7 @@ def getResponse(url):
     response = ''
     while response == '':
         try:
-            response = requests.get(url,headers=headers,auth=("psu_capstone@4gclinical.com", "iwK4GNzvsNfg0hnGx2Vl492A"))
+            response = requests.get(url,headers=headers,auth=("psu_capstone@4gclinical.com", "API KEY"))
             return response
         except:
             print("Connection refused by server..")
