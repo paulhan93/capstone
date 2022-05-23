@@ -1,23 +1,28 @@
+#monthYear {
+  font-size: 12px; 
+}
+
 th {
   text-align: center;
+  font-size: 5px; 
 }
 
 tr {
-  height: 64px; 
+  height: 32px; 
 }
 
 td {
-  font-size: 8px; 
+  font-size: 4px; 
   padding: 0px; 
   margin: 0;
-  height: 64px; 
-  width: 64px;
+  height: 32px; 
+  width: 32px;
 }
 
 ul {
   margin: 0;
   padding: 0px;
-  font-size: 10px;
+  font-size: 5px;
   text-align: center;
 }
 
@@ -31,5 +36,73 @@ li {
   left: 0;
   right: 0;
   margin: auto;
-  width: 448px;
+  width: 224px;
+}
+
+@media (min-height: 780px) {  
+  .calendar{
+    position: absolute;
+    bottom: 8em;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 336px;
+  }
+  #monthYear {
+    font-size: 24px; 
+  }
+  th {
+    text-align: center;
+    font-size: 12px; 
+  }
+  tr {
+    height: 48px; 
+  }
+  td {
+    font-size: 5px; 
+    padding: 0px; 
+    margin: 0;
+    height: 48px; 
+    width: 48px;
+  }
+  ul {
+    margin: 0;
+    padding: 0px;
+    font-size: 7px;
+    text-align: center;
+  }
+}
+ 
+@media (min-height: 900px) {  
+  .calendar{
+    position: absolute;
+    bottom: 8em;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 448px;
+  }
+  #monthYear {
+    font-size: 24px; 
+  }
+  th {
+    text-align: center;
+    font-size: 12px; 
+  }
+  tr {
+    height: 64px; 
+  }
+  td {
+    font-size: 8px; 
+    padding: 0px; 
+    margin: 0;
+    height: 64px; 
+    width: 64px;
+  }
+  ul {
+    margin: 0;
+    padding: 0px;
+    font-size: 10px;
+    text-align: center;
+  }
 }
