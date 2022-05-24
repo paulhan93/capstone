@@ -14,9 +14,10 @@
 
 {% block content %}
         
-    <br>
-    <br>
-    <h1>&nbsp;&nbsp;&nbsp;4G Clinical</h1>
+    <!--Centered w/ bootstrap-->
+    <div class="text-center">
+        <h2 class = "">4G Clinical</h2>
+    </div>
 
     <div class="outerbox">
 
@@ -31,9 +32,28 @@
         <br>
         <br>
 
-        <div class="box">
+        <!--<div class="box">
             <iframe src="https://www.urbandictionary.com/"  width="90%" height="512" align="center" style="padding:20px; border: 1px blue"></iframe>
-        </div>
+        </div>-->
+
+        <!--loads timeline-->
+        {% load static %}
+        <link rel="stylesheet" href="/static/timeline/timeline2.css">
+        <script type="module" src="/static/timeline/timeline.js" defer></script>
+        {% include 'html_objects/timeline.html' %}
+
+        <!--loads calendar-->
+        {% load static %}
+        <link rel="stylesheet" href="/static/calendar/calendar.css">
+        <script type="module" src="/static/calendar/calendar.js" defer></script>
+        {% include 'html_objects/calendar.html' %}
+
+        <!--loads dropdown-->
+        {% load static %}
+        <link rel="stylesheet" href="/static/dropdown/dropdown.css">
+        <script type="module" src="/static/dropdown/dropdown.js" defer></script>
+        {% include 'html_objects/dropdown.html' %}
+
     </div>
 
     <br>
