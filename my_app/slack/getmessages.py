@@ -22,15 +22,18 @@ def getmessage(select):
     us2 = 'ox'
     us1 = 'x'
     # Obscure the channel ids
-    ci2 = '039N12TVA7'
-    ci1 = 'C'
-    cib2 = '039N122TC2'
-    cib1 = 'C'
+    cid_5607_02 = '3G45YF3A9'
+    cid_5607_01 = 'C0'
+    cid_6613_02 = '3GWRKVC4Q'
+    cid_6613_01 = 'C0'
+    cid_7248_02 = '3G72NEPSP'
+    cid_7248_01 = 'C0'
 
     # Reconstruct tokens
     user_token = us1 + us2 + us3 + us4 + us5 + us6 + us7
-    channel_id_random = ci1 + ci2
-    channel_id_general = cib1 + cib2
+    cid_5607 = cid_5607_01 + cid_5607_02
+    cid_6613 = cid_6613_01 + cid_6613_02
+    cid_7248 = cid_7248_01 + cid_7248_02
 
     # WebClient instantiates a client that can call API methods
     client = WebClient(token=user_token)
@@ -39,13 +42,16 @@ def getmessage(select):
     conversation_history = []
     # ID of the channel you want to send the message to
 
-    if select == '0':
-        channel_id = channel_id_general # General
-    elif select == '1':
-        channel_id = channel_id_random # Random
-    else: 
-        channel_id = channel_id_general
+    channel_id = ''
 
+    if select == '0':
+        channel_id = cid_5607 # Janssen-5607
+    elif select == '1':
+        channel_id = cid_6613 # Janssen-6613
+    elif select == '2':
+        channel_id = cid_7248 # Janssen-7248
+    else: 
+        channel_id = cid_5607
 
     try:
         # Call the conversations.history method using the WebClient
@@ -136,13 +142,14 @@ def getmessage(select):
 
 def build_html(str_name, str_date, str_hyperlink, str_video_html, str_text):
     global slack_html
-    slack_html += str_name + ' <span class="slack_date_time">' + str_date + '</span><br>'
+    slack_html += '<div class="text_bubble"><span class="slack_username">' + str_name + '</span> <span class="slack_date_time">' + str_date + '</span><br>'
     if str_text:
-        slack_html += str_text + '<br>'
+        slack_html += '<span class="slack_message">' + str_text + '</span><br>'
     if str_hyperlink:
-        slack_html += '<a href="' + str_hyperlink + '" target=_blank>' + str_hyperlink + '</a><br>'
+        slack_html += 'File attachment: <span class="slack_hyperlink"><a href="' + str_hyperlink + '" target=_blank>' + str_hyperlink + '</a></span><br>'
     if str_video_html:
         slack_html += str_video_html + '<br>'
+    slack_html += '</div>'
 
 
 
