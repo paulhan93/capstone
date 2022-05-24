@@ -8,27 +8,19 @@
     <!-- Google fonts accessibility commands:-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+     
+
 </head>
 
 <body id="home" style="background-color:#FFFFFF; color:#a6a6a6">
 
 <style>
-
-html {
-    font-size: 100%;
+h1 { 
+color: #212529;
+font-weight: bold ;
+font-family: 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
 }
-
-span.title { 
-    color: #212529;
-    font-size: 1.4em;
-    font-weight: bold ;
-    font-family: 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
-}
-
 div.scroll {
                 margin:4px, 4px;
                 padding:4px;
@@ -37,45 +29,28 @@ div.scroll {
                 height: 110px;
                 overflow-x: hidden;
                 overflow-y: auto;
-                
+                text-align:justify;
             }
 
 span.slack_username {
     color: #333333;
-    font-size: 1rem;
-    font-family: 'Noto Sans', 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
-    font-weight: 600;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
 }
 
 span.slack_date_time {
     color: #333333;
-    font-size: 0.8rem;
-    font-family: 'Quicksand', 'Arial', 'Geneva', 'Helvetica', sans-serif;
-    font-weight: 600;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'Roboto', 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
 }
 
 span.slack_message {
     color: #333333;
-    font-size: 1rem;
-    font-family: 'Noto Sans', 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
-    font-weight: 300;
-    word-spacing: normal;
-}
-
-span.slack_hyperlink {
-    color: #333333;
-    font-size: 1rem;
-    font-family: 'Share Tech Mono','Noto Sans', 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
-    font-weight: 300;
-    word-spacing: normal;
-}
-
-span.slack_hyperlink {
-    color: #333333;
-    font-size: 1rem;
-    font-family: 'Share Tech Mono','Noto Sans', 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
-    font-weight: 300;
-    word-spacing: normal;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
 }
 
 div.float_elements {
@@ -85,126 +60,34 @@ div.float_elements {
   background: #212529;  
 }
 
-div.channel_select {
-  display: inline-block;
-  width: 275px;
-  height: 60px;
-  background: #444444;  
-}
-
-div.send_message {
-  display: inline-block;
-  width: 275px;
-  height: 60px;
-  background: #444444;  
-}
-
-
 div.content{
     margin:4px, 4px; 
     padding:0px;        /* This pads outside the div */
     width: 550px; 
-    height: 300px; 
+    height: 200px; 
     overflow-x: hidden; 
     overflow-y: auto; 
+    text-align:justify
 }
-
-div.gradient {
-    width: 550px; 
-    height: 4.7rem; 
-    background-color: #FFFFFF; 
-    background-image: linear-gradient(to right, #611f69, #3b183f); 
-    /* Slack official purple: #611f69
-    Teal: #1EA1A1
-    */
-}
-
-.logo {
-    position:absolute;
-    top: 2.8rem;
-    left: 25px;
-    z-index: 2;
-}
-
-.text_bubble {
-    border-radius: 25px;
-    background: #eceff1;
-    padding: 1rem;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    display: inline-block;
-}
-
-.channel_title_div {
-    display: inline-block;
-    height: 5.35rem;
-    width: 30rem;
-    position: absolute;
-    top: 2.75rem;
-    left: 25px;
-    z-index: 2;
-    text-align: right;
-    bottom: 0;
-}
-
-.channel_title {
-    color: #FFFFFF;
-    font-size: 2.55rem;
-    font-family: 'Lato', 'Quicksand', 'Arial', 'Geneva', 'Helvetica', sans-serif;
-    font-weight: 900;
-    margin-top:80px;
-    position:absolute;
-    bottom:0;
-    right:0;
-}
-
-
-
-.pushable {
-    background: #eeb700;
-    border-radius: 12px;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    outline-offset: 4px;
-  }
-  .front {
-    display: block;
-    padding: 12px 42px;
-    border-radius: 12px;
-    font-size: 1.25rem;
-    background: #ffbb00;
-    color: white;
-    transform: translateY(-6px);
-    /* Yellow A: #ffcc00 Yellow B: #ffc200 Yellow C: #ffbb00 */
-  }
-
-  .pushable:active .front {
-    transform: translateY(-2px);
-  }
-
-
-
-
-
 
 
 </style>
 
-<br>
-<br>
 
 
+
+<br>
+<br>
+	<h1>&nbsp;&nbsp;&nbsp;4G Clinical Slack Display Messages Test Page</h1>
+
+<br>
+<br>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
    
-    $('#content').load("get_formatted_messages/?channel=0"); /* Load Channel 0 (General) as default */
-
-    const channel_title = document.getElementById("channel_title");
-    channel_title.textContent = "#general";
+   $('#content').load("get_formatted_messages");
 
 });
 
@@ -218,76 +101,122 @@ $(document).ready(function(){
             case '0':
                 alert("You selected" + channelStr + ": " + channelVal);
                 $('#content').load("get_formatted_messages/?channel=0");
-                const channel_title0 = document.getElementById("channel_title");
-                channel_title0.textContent = "#general";
                 break;
             case '1':
                 alert("You selected" + channelStr + ": " + channelVal);
                 $('#content').load("get_formatted_messages/?channel=1");
-                const channel_title1 = document.getElementById("channel_title");
-                channel_title1.textContent = "#random";
+
                 break;
             default:
         }
+
+
         return;
     }
 
 </script>
 
-<!-- <span class="title">4G Clinical Slack Display Messages Test Page</span> -->
-{% load static %}
-<div class="gradient"><img src="{% static 'images/slack_logo.svg'%}" width="200" class="logo"><div 
-    class="channel_title_div"><span 
-        class="channel_title" id="channel_title">oogabooga</span></div></div>
 
 <div class="content" id="content"></div>
 
-<div class="gradient"><div class="float_elements">  
-    <select id="channel">
-        <option value="0">#general</option>
-        <option value="1">#random</option>
-    </select>
-    <button onclick="reload_channel()">load</button>
-    </div><div class="float_elements"> 
-    <form action="sendmessage" method="POST">
-    <label for="message">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-    <input name="message" id="message" value="enter any string">
-    <button class="pushable"><span class="front">send</span></button></form></div></div>
-
-
-
 <div class="float_elements">  
 <select id="channel">
-    <option value="0">#general</option>
-    <option value="1">#random</option>
+    <option value="0">general</option>
+    <option value="1">random</option>
 </select>
 <button onclick="reload_channel()">load</button>
 </div><div class="float_elements"> 
-<form action="DELETECAPSsendmessage" method="POST">
+<form action="sendmessage" method="POST">
 <label for="message">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
 <input name="message" id="message" value="enter any string">
-<button class="pushable"><span class="front">send</span></button></form>
+<button>Send</button></form>
 </div>
 
+
+
+
 <br>
-<br>
-<br>
-<button class="pushable">
-    <span class="front">
-      Push me
-    </span>
-  </button>
+
+
+
 
 
 </body>
 </html>
 
 
-<!-- WORKING IFRAME:
+<!--
+
+
+    <div class="float-container" style="margin:4px, 4px; padding:20px; width: 550px; height: 50px; overflow-x: hidden; text-align:justify">
+</div>
+
+
+span.slack_date {
+    color: #333333;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
+}
+
+span.slack_time {
+    color: #333333;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
+}
+
+span.slack_message {
+    color: #333333;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: 'DokChampa', 'Arial', 'Geneva', 'Helvetica', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+JAVASCRIPT TEST CODE FOR TRYING TO GET THE WINDOW TO AUTOSCROLL TO THE BOTTOM:
+   $(document).scrollTop($(document).height());
+
+   $("#content").animate({ scrollTop: $("#content")[0].scrollHeight}, 1000);
+
+   $('#content').scrollTop($('#content')[0].scrollHeight);
+   d = $('#content'); $(d).scrollTop( $(d).prop("scrollHeight") );
+
+WORKING IFRAME:
 
 
 <div class="messages">
     <iframe src="get_formatted_messages/" width="600" height="200" align="left" style="padding:20px; border: 1px blue"> </iframe>
 </div>
+
+WORKING SCRIPT:
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+   
+   $('#content').load("get_formatted_messages/");
+
+});
+</script>
+<div id="content" style="margin:4px, 4px; padding:20px; width: 550px; height: 110px; overflow-x: hidden; overflow-y: auto; text-align:justify"></div>
+
+
+MISCELLANEOUS:
+
+http://127.0.0.1:8000/slack/get_formatted_messages/
+    <input type="submit" value="Send" class="submit-btn" />
+
+
 
 -->

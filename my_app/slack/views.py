@@ -14,36 +14,26 @@ from datetime import datetime
 @api_view(["POST"])
 def sendmessage(request):
 
-# Janssen-5607
-  hook0_4 = 'cEgNSO5d4YBqUKiVImKqNzq'
-  hook0_3 = '03FSR3V6S3/J'
-  hook0_2 = '03A0K7N7MX/B'
-  hook0_1 = 'T'
+  # Random:
+  hooka4 = 'iWnWYg4bZiwSaebPGfMgV8n' 
+  hooka3 = '03E9G3TW4W/y'
+  hooka2 = '03A0K7N7MX/B'
+  hooka1 = 'T'
 
-# Janssen-6613
-  hook1_4 = 'pOtkCNrlI5T9u6QdJjLzNwx'
-  hook1_3 = '03G9PGFSJ0/i'
-  hook1_2 = '03A0K7N7MX/B'
-  hook1_1 = 'T'
+  # General:
+  hookb4 = 'cSEyV3xpOvxT4bRQqRLN8fw' 
+  hookb3 = '03EG5WCW0K/p'
+  hookb2 = '03A0K7N7MX/B'
+  hookb1 = 'T'
 
-# Janssen-7248
-  hook2_4 = 'lrDg3wfZlCa1Z4Bmd02BKer'
-  hook2_3 = '03GX6080SC/2'
-  hook2_2 = '03A0K7N7MX/B'
-  hook2_1 = 'T'
-
-  webhooks = [ hook0_1 + hook0_2 + hook0_3 + hook0_4, hook1_1 + hook1_2 + hook1_3 + hook1_4, hook2_1 + hook2_2 + hook2_3 + hook2_4 ]
+  webhooks = [ hooka1 + hooka2 + hooka3 + hooka4,  hookb1 + hookb2 + hookb3 + hookb4 ]
 
   str = request.POST["message"]
-  channel_id = request.POST["channelId"]
 
   for i in range(len(webhooks)):
-      send_message(str, webhooks[i])
-  
-  return HttpResponse("")
+    send_message(str, webhooks[i])
 
-  #return HttpResponseRedirect('/slack/sendmessage.html')
-  #return HttpResponse("")
+  return HttpResponse("You submitted: \"" + str + "\"")
 
 def get_formatted_messages(request):
   channel_enum = ''
