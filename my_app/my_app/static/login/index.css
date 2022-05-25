@@ -1,5 +1,6 @@
 body{
     /* background-color: aquamarine; */
+    overflow-x: hidden;
 }
 
 .top-nav{
