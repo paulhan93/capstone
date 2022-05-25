@@ -4,9 +4,8 @@ from django.http import HttpResponse
 #Imports
 import requests
 import time
+import json
 
-
-FLAG = 0
 
 def scrape(request):
     #Assigned Projects
@@ -37,6 +36,19 @@ def toJSON(kickoff,contract, spec, smoke_start, smoke_comp, val_S, val_comp, uat
         }
     }
 
+    with open('schedule.json', 'r+') as file:
+        f_data = json.load(file)
+
+
+        for index in f_data["Projects"]:
+            #If exists quit
+            if index["Project Name"] == name:
+                print("Exists")
+                return
+
+        f_data["Projects"].append(data)
+        file.seek(0)
+        json.dump(f_data, file, indent=4)
 
 def getResponse(url):
     headers = {
@@ -46,7 +58,7 @@ def getResponse(url):
     response = ''
     while response == '':
         try:
-            response = requests.get(url,headers=headers,auth=("psu_capstone@4gclinical.com", "iwK4GNzvsNfg0hnGx2Vl492A"))
+            response = requests.get(url,headers=headers,auth=("psu_capstone@4gclinical.com", "3c8ij012OfNS38UsdU7U55E8"))
             return response
         except:
             print("Connection refused by server..")
@@ -84,10 +96,8 @@ def myProjects():
         fpi = data['fields']['customfield_11766']
         start = data['fields']['customfield_11654']
         end = data['fields']['customfield_11772']
-        name = data['fields']['project']['name']
+        name = data['fields']['summary']
         key = data['fields']['project']['key']
-
-        print(kickoff , cont_exec_date)
 
         #Send to JSON
         toJSON(kickoff, cont_exec_date, spec_sign_off, smoke_start, smoke_complete, val_start, val_complete, uat_start, uat_complete,golive, fpi, start, end, name, key)
