@@ -1,0 +1,215 @@
+body{
+    /* background-color: aquamarine; */
+}
+
+.top-nav{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+.top-nav .pic{
+
+}
+.top-nav .pic .g_icon{
+    width: 40px;
+}
+.top-nav .name{
+    font-weight: 900;
+    color:#050038;
+    margin-right: 5px;
+}
+
+.newline{
+    background-color: #22296a;
+    width: 100%;
+    height: 15px;
+}
+
+.button2{
+    background-color: #7bbbf0;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+  }
+
+
+#login{
+    margin-top: 5%;
+    margin-bottom: 30px;
+    height: 300px;
+
+    display: flex;
+    justify-content: center;
+    /* margin-top: 150px;
+    margin-left: 10%;
+    margin-right: 10%; */
+    /* border-style: groove; */
+    /* border-style: dotted; */
+}
+
+#login .signin{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 250px;
+    height: 200px;
+    /* margin-left: 20%; */
+
+    border-radius: 15%;
+    background-color: #d5ebfc;
+    /* background-color: black; */
+}
+#login .signin .title{
+
+    /* border-style: dotted; */
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+
+    /* justify-content: center; */
+}
+#login .signin .userinfo{
+    display: block;
+    /* border-style: dotted; */
+    /* justify-content: center; */
+}
+
+#login .signin .userinfo .useremail{
+    text-align: center;
+    margin-bottom: 5px;
+}
+#email{
+    border-radius: 5px;
+    border-width: thin;
+}
+#password{
+    border-radius: 5px;
+    border-width: thin;
+}
+#login .signin .userinfo .userpassword{
+    text-align: center;
+}
+#login .signin .button{
+    /* border-style: dotted; */
+    margin-top: 15px;
+    text-align: center;
+    /* justify-content: center; */
+}
+#login .signin .button .sub{
+    /* padding: 10px 30px; */
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 4px;
+    background-color: #2d9bf0;
+    color: #ffffff;
+    font-weight: 600;
+}
+#login .signin .button .pw{
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 4px;
+    background-color: #2d9bf0;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+#bottominfo{
+    background-color: #22296a;
+    position:absolute;
+    bottom: 0px;
+    width: 100%;
+    border-style: dotted;
+}
+
+#bottominfo .info{
+    color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#bottominfo .info .icon{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* justify-self: center; */
+    width: 100%;
+    height: 40px;
+
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+
+    align-items: baseline;
+    /* border-style: dotted; */
+
+}
+#bottominfo .info .icon .twitter{
+    /* background-color: #fff; */
+    /* color: aliceblue; */
+    width: 25px;
+    margin-right: 5px;
+}
+#bottominfo .info .icon .twitter .twitter_icon{
+    background-color: aliceblue;
+    border-radius: 15%;
+}
+
+#bottominfo .info .icon .facebook{
+    /* background-color:aqua; */
+    width: 25px;
+    margin-right: 5px;
+}
+#bottominfo .info .icon .facebook .facebook_icon{
+    background-color: aliceblue;
+    border-radius: 15%;
+}
+
+#bottominfo .info .icon .google{
+    /* background-color:aqua; */
+    width: 25px;
+    margin-right: 5px;
+}
+#bottominfo .info .icon .google .google_icon{
+    background-color: aliceblue;
+    border-radius: 15%;
+}
+
+#bottominfo .info .icon .instagram{
+    /* background-color:aqua; */
+    width: 25px;
+    margin-right: 5px;
+}
+#bottominfo .info .icon .instagram .instagram_icon{
+    background-color: aliceblue;
+    border-radius: 15%;
+}
+
+
+
+#bottominfo .info .lefttext{
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    margin-left: 10%;
+}
+
+#bottominfo .info .lefttext .text{
+    /* border-style: dotted; */
+    /* background-color: aqua; */
+}
+#bottominfo .info .righttext{
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    margin-left: 10%;
+    /* background-color: aqua; */
+}
