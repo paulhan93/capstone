@@ -27,27 +27,27 @@
       </div>
     {% endif %}
 
-        <div class="top-nav">
-            <div class="pic">
-                <img class="g_icon" src="/static/login/image/logo.png" alt="4g">
-            </div>
-            <div class="name">
-                <p>
-                    CLIENT HUB
-                </p>
-
-            </div>
-        </div>
+        
         <div class="newline">
         </div>
     <div class="p-3 mb-3 bg nav_login">
       <div class="container d-flex justify-content-between">
           {% if user.is_authenticated %}
+          <div class="top-nav" >
+            <div class="pic"><a href="http://127.0.0.1:8000/index/">
+                <img class="g_icon" src="/static/login/image/logo.png" alt="4g">
+              </a>
+            </div>
+            <div class="name">
+                <p ><a style="color:white;" href="http://127.0.0.1:8000/index/">   CLIENT HUB    </a></p>
+            </div>
+          </div>
           <!-- <div><a class="text-light" href="{% url 'account_email' %}">Change E-Mail</a></div> -->
-          <div><a class="text-light" href="{% url 'Slack' %}">Slack</a></div>
+          {% comment %} <div><a class="text-light" href="{% url 'Slack' %}">Slack</a></div>
           <div><a class="text-light" href="{% url 'home' %}">Home</a></div>
-          <div><a class="text-light" href="{% url 'Jira' %}">Jira</a></div>
-          <div><a class="text-light" href="{% url 'account_logout' %}">Sign Out</a></div>
+          <div><a class="text-light" href="{% url 'Jira' %}">Jira</a></div> {% endcomment %}
+          {% comment %} <div><a class="text-light" href="{% url 'account_logout' %}">Sign Out</a></div> {% endcomment %}
+          <div><a class="text-light" href="{% url 'account_logout' %}"><button class="button2">Sign Out</button></a></div>
           {% else %}
           <div><a class="text-light" href="{% url 'account_login' %}">Sign In</a></div>
           <div><a class="text-light" href="{% url 'account_signup' %}">Sign Up</a></div>
