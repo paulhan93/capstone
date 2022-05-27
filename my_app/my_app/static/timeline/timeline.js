@@ -73,7 +73,7 @@ function changeCircleColor() {
       else{
         (theDiv.getElementsByClassName("input")[
           i
-        ].style.backgroundColor = "OrangeRed");
+        ].style.backgroundColor = "Orange");
       }
     }
     else{

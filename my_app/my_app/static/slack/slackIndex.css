@@ -1,4 +1,38 @@
 .slack{
-    width: 620px;
-    height: 680px;
+    /*for some reason, setting position other than `relative` breaks the position of everything else*/
 }
+
+.slackWindow{
+    position: relative;
+    top: 70px;
+    width: 560px;
+    height: 637px;
+    left: 1000px;
+}
+
+ /*media for index.html*/
+@media (min-width: 1375px) and (max-width: 1573px) {
+    .slackWindow{
+        left: 800px;
+    }
+}
+
+@media (min-width: 1208px) and (max-width: 1375px) {
+    .slackWindow{
+        left: 650px;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1208px) {
+    .slackWindow{
+        left: 535px;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1094px){
+    .slackWindow{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+

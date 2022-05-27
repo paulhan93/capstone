@@ -1,5 +1,5 @@
 body{
-    /* background-color: aquamarine; */
+    /* background-color: bisque; */
     overflow-x: hidden;
 }
 
@@ -126,8 +126,8 @@ body{
 
 #bottominfo{
     background-color: #22296a;
-    position:absolute;
-    bottom: 0px;
+    position:relative;
+    bottom: -110px;
     width: 100%;
     border-style: dotted;
 }
