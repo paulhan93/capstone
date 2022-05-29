@@ -1,0 +1,59 @@
+li {
+    display: block;
+}
+.calendar {
+  position: absolute;
+  top: 250px;
+  left: 400px;
+  width: 448px;
+}
+#monthYear {
+  font-size: 24px; 
+}
+th {
+  text-align: center;
+  font-size: 12px; 
+}
+tr {
+  height: 64px; 
+}
+td {
+  font-size: 8px; 
+  padding: 0px; 
+  margin: 0;
+  height: 64px; 
+  width: 64px;
+}
+ul {
+  margin: 0;
+  padding: 0px;
+  font-size: 10px;
+  text-align: center;
+}
+
+ /*media for index.html*/
+@media (min-width: 1375px) and (max-width: 1573px) {
+  .calendar{
+    left: 200px;
+  }
+}
+
+@media (min-width: 1208px) and (max-width: 1375px) {
+  .calendar{
+    left: 150px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 1208px) {
+  .calendar{
+    left: 70px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 1094px){
+  .calendar{
+      left: 50%;
+      transform: translateX(-50%);
+      top: 850px;
+  }
+}
