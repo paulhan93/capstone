@@ -10,9 +10,9 @@ body{
 
 }
 
-.top-nav .pic{
+/* .top-nav .pic{
 
-}
+} */
 .top-nav .pic .g_icon{
     width: 40px;
 }
@@ -23,7 +23,9 @@ body{
 }
 
 .newline{
-    background-color: #22296a;
+    /* background-color: #22296a; */
+    background-color: #ffffff;
+    background-image: linear-gradient(to right, #2ac4fc,#22296a);
     width: 100%;
     height: 15px;
 }
@@ -203,10 +205,10 @@ body{
     margin-left: 10%;
 }
 
-#bottominfo .info .lefttext .text{
+/* #bottominfo .info .lefttext .text{
     /* border-style: dotted; */
-    /* background-color: aqua; */
-}
+    /* background-color: aqua; 
+} */
 #bottominfo .info .righttext{
     grid-column-start: 2;
     grid-column-end: 3;
