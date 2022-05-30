@@ -5,27 +5,28 @@
 .slackWindow{
     position: relative;
     top: 70px;
-    width: 560px;
+    width: 565px;
     height: 637px;
-    left: 1000px;
+    left: 52%;
 }
 
  /*media for index.html*/
 @media (min-width: 1375px) and (max-width: 1573px) {
     .slackWindow{
-        left: 800px;
+        left: 51%;
+       
     }
 }
 
 @media (min-width: 1208px) and (max-width: 1375px) {
     .slackWindow{
-        left: 650px;
+        left: 50%;
     }
 }
 
 @media (min-width: 800px) and (max-width: 1208px) {
     .slackWindow{
-        left: 535px;
+        left: 49%;
     }
 }
 

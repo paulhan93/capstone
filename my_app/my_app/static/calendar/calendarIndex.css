@@ -4,7 +4,7 @@ li {
 .calendar {
   position: absolute;
   top: 250px;
-  left: 400px;
+  right: 57%;
   width: 448px;
 }
 #monthYear {
@@ -34,19 +34,19 @@ ul {
  /*media for index.html*/
 @media (min-width: 1375px) and (max-width: 1573px) {
   .calendar{
-    left: 200px;
+    right: 56%;
   }
 }
 
 @media (min-width: 1208px) and (max-width: 1375px) {
   .calendar{
-    left: 150px;
+    right: 55%;
   }
 }
 
 @media (min-width: 800px) and (max-width: 1208px) {
   .calendar{
-    left: 70px;
+    right: 54%;
   }
 }
 
