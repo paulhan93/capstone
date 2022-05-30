@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-/* body{
-    background-color: aquamarine; 
-} */
-=======
 body{
     /* background-color: bisque; */
     overflow-x: hidden;
 }
->>>>>>> 4b0dbfb087a603fd559c1c936ed350793ca09801
 
 .top-nav{
     display: flex;
