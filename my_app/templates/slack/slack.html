@@ -351,7 +351,7 @@ $(document).ready(function(){
     function send_messagef() 
     {
         m = document.getElementById("textarea_message").value;        
-        $.post("/slack/sendmessage", {message: m, channelId: 2}, function(data, status, xhr){  alert("Returned val for channelId is:" + data); });
+        $.post("/slack/sendmessage", {message: m, channelId: 2}, function(data, status, xhr){  /* do nothing with response */ });
         document.getElementById("textarea_message").value = "";       
         return;
     }

@@ -3,7 +3,7 @@
 {#    <head>#}
 {#        <meta charset="UTF-8" />#}
 {#        <meta http-equiv="X-UA-Compatible" content="IE=edge" />#}
-{#        <meta name="viewport" content="width=device-width, initial-scale=1.0" />#}
+{#        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>#}
 {#        <title>Login</title>#}
 {##}
 {#        <link rel="stylesheet" href="/static/login/index.css" />#}
@@ -13,32 +13,46 @@
 {% extends 'account/base.html' %}
 
 {% block content %}
-        
-    <br>
-    <br>
-    <h1>&nbsp;&nbsp;&nbsp;4G Clinical</h1>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 
-    <div class="outerbox">
-
-        <div class="box">
-            <iframe src="https://www.google.com/webhp?igu=1" width="45%" height="512" align="left" style="padding:20px; border: 1px blue"></iframe>
-        </div>
-
-        <div class="box">
-            <iframe src="https://www.rhymezone.com/" width="45%" height="512" align="left" style="padding:20px; border: 1px blue"></iframe>
-        </div>
-
-        <br>
-        <br>
-
-        <div class="box">
-            <iframe src="https://www.urbandictionary.com/"  width="90%" height="512" align="center" style="padding:20px; border: 1px blue"></iframe>
-        </div>
+    <!--Centered w/ bootstrap-->
+    <div class="text-center">
+        <h2>4G Clinical</h2>
     </div>
 
-    <br>
+    <!--loads slack iframe-->
+    
+        <div class="slack">
+            <iframe class = "slackWindow" src="/slack/slack.html"></iframe>
+            <link rel="stylesheet" href="/static/slack/slackIndex.css">
+        </div>
+  
+   
 
-    <section id="bottominfo" style="position: relative ">
+
+    <!--ORDER MATTERS(dropdown, timeline, then calendar)-->
+
+    <!--loads dropdown-->
+    {% load static %}
+    <link rel="stylesheet" href="/static/dropdown/dropdownIndex.css">
+    <script type="module" src="/static/dropdown/dropdown.js" defer></script>
+    {% include 'html_objects/dropdown.html' %}
+    
+    <!--loads timeline-->
+    {% load static %}
+    <link rel="stylesheet" href="/static/timeline/timelineIndex.css">
+    <script type="module" src="/static/timeline/timeline.js" defer></script>
+    {% include 'html_objects/timeline.html' %}
+
+    <!--loads calendar-->
+    {% load static %}
+    <link rel="stylesheet" href="/static/calendar/calendarIndex.css">
+    <script type="module" src="/static/calendar/calendar.js" defer></script>
+    {% include 'html_objects/calendar.html' %}
+    
+
+
+    <section id="bottominfo">
         <div class="info">
             <div class="icon">
                 <div class="twitter">

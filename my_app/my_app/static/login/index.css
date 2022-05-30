@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 /* body{
     background-color: aquamarine; 
 } */
+=======
+body{
+    /* background-color: bisque; */
+    overflow-x: hidden;
+}
+>>>>>>> 4b0dbfb087a603fd559c1c936ed350793ca09801
 
 .top-nav{
     display: flex;
@@ -127,8 +134,8 @@
 
 #bottominfo{
     background-color: #22296a;
-    position:absolute;
-    bottom: 0px;
+    position:relative;
+    bottom: -110px;
     width: 100%;
     border-style: dotted;
 }
