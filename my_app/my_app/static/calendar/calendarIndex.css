@@ -54,6 +54,6 @@ ul {
   .calendar{
       left: 50%;
       transform: translateX(-50%);
-      top: 850px;
+      top: 895px;
   }
 }
