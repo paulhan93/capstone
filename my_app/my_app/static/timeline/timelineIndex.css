@@ -84,7 +84,7 @@
     display: inline-block;
     top: -70px;
     transform: translateX(-50%);
-    width: 55px;
+    width: 62px;
     height: 20px;
     font-size: 11.5px;
     word-wrap: break-word;
@@ -145,7 +145,7 @@
     }
     .input span::before{
       font-size: 10px;
-      width: 50px;
+      width: 59px;
       top: -55px;
     }
     
@@ -211,7 +211,7 @@
       top: 75px;
       text-indent: 0;
       text-align: center;
-      width: 55px;
+      width: 57px;
     }
     .input span::after {
       top: 50%;
