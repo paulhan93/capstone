@@ -146,7 +146,7 @@ def build_html(str_name, str_date, str_hyperlink, str_video_html, str_text):
     if str_text:
         slack_html += '<span class="slack_message">' + str_text + '</span><br>'
     if str_hyperlink:
-        slack_html += 'File attachment: <span class="slack_hyperlink"><a href="' + str_hyperlink + '" target=_blank>' + str_hyperlink + '</a></span><br>'
+        slack_html += '<span class="slack_file_attachment">FILE ATTACHMENT: </span><span class="slack_hyperlink"><a href="' + str_hyperlink + '" target=_blank>' + str_hyperlink + '</a></span><br>'
     if str_video_html:
         slack_html += str_video_html + '<br>'
     slack_html += '</div>'
