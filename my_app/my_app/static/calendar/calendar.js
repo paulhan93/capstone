@@ -104,7 +104,7 @@ function showCalendar(month, year) {
                     cell.appendChild(ul);	
 
                     // color events before today in green and events after today in gray
-                    cell.classList.add((dateObject < today) ? "bg-success" : "bg-light");
+                    cell.style.backgroundColor = (dateObject < today) ? "green" : "Orange";
                     return false; // only display one event per day for now
                 })
 

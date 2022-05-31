@@ -3,7 +3,7 @@
 {#    <head>#}
 {#        <meta charset="UTF-8" />#}
 {#        <meta http-equiv="X-UA-Compatible" content="IE=edge" />#}
-{#        <meta name="viewport" content="width=device-width, initial-scale=1.0" />#}
+{#        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>#}
 {#        <title>Login</title>#}
 {##}
 {#        <link rel="stylesheet" href="/static/login/index.css" />#}
@@ -13,48 +13,60 @@
 {% extends 'account/base.html' %}
 
 {% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 
-    <div class="outerbox">
-
-        <div class="box">
-            <iframe src="/jira" width="45%" height="512" align="left" style="padding:20px; border: 1px blue"></iframe>
-        </div>
-
-        <div class="box">
-            <iframe src="/slack/slack.html" width="620" height="680" align="left" style="padding:20px; border: 1px blue"></iframe>
-        </div>
+    <!--Centered w/ bootstrap-->
+    <div class="text-center">
+        <h2>4G Clinical</h2>
     </div>
 
-    <br>
+    <!--loads slack iframe-->
+    
+        <div class="slack">
+            <iframe class = "slackWindow" src="/slack/slack.html"></iframe>
+            <link rel="stylesheet" href="/static/slack/slackIndex.css">
+        </div>
+  
+   
 
-    <section id="bottominfo" style="visibility: hidden;">
+
+    <!--ORDER MATTERS(dropdown, timeline, then calendar)-->
+
+    <!--loads dropdown-->
+    {% load static %}
+    <link rel="stylesheet" href="/static/dropdown/dropdownIndex.css">
+    <script type="module" src="/static/dropdown/dropdown.js" defer></script>
+    {% include 'html_objects/dropdown.html' %}
+    
+    <!--loads timeline-->
+    {% load static %}
+    <link rel="stylesheet" href="/static/timeline/timelineIndex.css">
+    <script type="module" src="/static/timeline/timeline.js" defer></script>
+    {% include 'html_objects/timeline.html' %}
+
+    <!--loads calendar-->
+    {% load static %}
+    <link rel="stylesheet" href="/static/calendar/calendarIndex.css">
+    <script type="module" src="/static/calendar/calendar.js" defer></script>
+    {% include 'html_objects/calendar.html' %}
+    
+
+
+    <section id="bottominfo">
         <div class="info">
             <div class="icon">
                 <div class="twitter">
-                    <a style="text-decoration: none;" href="https://github.com/">
+                    <a style="text-decoration: none;" href="https://twitter.com/4gclinical">
                         <!-- <iframe src="/static/login/image/github.svg" frameborder="0"></iframe> -->
                         <img class="twitter_icon" src="/static/login/image/twitter.svg" alt="twitter">
                     </a>
                 </div>
                 <div class="facebook">
-                    <a style="text-decoration: none;" href="https://github.com/">
+                    <a style="text-decoration: none;" href="https://www.facebook.com/4gclinical/">
                         <!-- <iframe src="/static/login/image/github.svg" frameborder="0"></iframe> -->
                         <img class="facebook_icon" src="/static/login/image/facebook.svg" alt="facebook">
                     </a>
                 </div>
-                <div class="google">
-                    <a style="text-decoration: none;" href="https://github.com/">
-                        <!-- <iframe src="/static/login/image/github.svg" frameborder="0"></iframe> -->
-                        <img class="google_icon" src="/static/login/image/google.svg" alt="google">
-                    </a>
-                </div>
-                <div class="instagram">
-                    <a style="text-decoration: none;" href="https://github.com/">
-                        <!-- <iframe src="/static/login/image/github.svg" frameborder="0"></iframe> -->
-                        <img class="instagram_icon" src="/static/login/image/instagram.svg" alt="instagram">
-                    </a>
-                </div>
-
             </div>
             <div class="lefttext">
                 <div class="text">

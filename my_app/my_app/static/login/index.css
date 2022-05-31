@@ -131,7 +131,7 @@ body{
     position:relative;
     bottom: -110px;
     width: 100%;
-    border-style: dotted;
+    border-style: none;
 }
 
 #bottominfo .info{

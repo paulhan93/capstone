@@ -1,4 +1,11 @@
+
+.dropdown{
+    position: relative;
+    bottom: 650px;
+}
+
 .dropdown-menu{
     overflow-y: scroll;
     max-height: 110px;
 }
+

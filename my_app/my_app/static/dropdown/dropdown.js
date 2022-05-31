@@ -21,7 +21,7 @@ function onClick() {
 //changes title according to selected name
 function changeTitle(name){
        //change title based on clicked name
-        const title = document.getElementsByClassName("text-center")[0].getElementsByTagName("h2")[0]
+        const title = document.getElementsByTagName("h2")[0]
         title.innerHTML = name;
 }
 

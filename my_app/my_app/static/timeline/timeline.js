@@ -50,21 +50,21 @@ function changeCircleColor() {
 
     //change color based on comparisons on date
     if (timelineSplit != "None") {
-      if (todaySplit[2] > timelineSplit[2]) {
+      if (parseInt(todaySplit[2]) > parseInt(timelineSplit[2])) {
         (theDiv.getElementsByClassName("input")[
           i
         ].style.backgroundColor = "green");
       } else if (
-        todaySplit[2] >= timelineSplit[2] &&
-        todaySplit[0] > timelineSplit[0]
+        parseInt(todaySplit[2]) >= parseInt(timelineSplit[2]) &&
+        parseInt(todaySplit[0]) > parseInt(timelineSplit[0])
       ) {
         (theDiv.getElementsByClassName("input")[
           i
         ].style.backgroundColor = "green");
       } else if (
-        todaySplit[2] >= timelineSplit[2] &&
-        todaySplit[0] >= timelineSplit[0] &&
-        todaySplit[1] > timelineSplit[1]
+        parseInt(todaySplit[2]) >= parseInt(timelineSplit[2]) &&
+        parseInt(todaySplit[0]) >= parseInt(timelineSplit[0]) &&
+        parseInt(todaySplit[1]) >  parseInt(timelineSplit[1])
       ) {
         (theDiv.getElementsByClassName("input")[
           i
@@ -73,7 +73,7 @@ function changeCircleColor() {
       else{
         (theDiv.getElementsByClassName("input")[
           i
-        ].style.backgroundColor = "#2C3E50");
+        ].style.backgroundColor = "Orange");
       }
     }
     else{
