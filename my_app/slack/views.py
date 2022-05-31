@@ -37,9 +37,18 @@ def sendmessage(request):
   str = request.POST["message"]
   channel_id = request.POST["channelId"]
 
-  for i in range(len(webhooks)):
-      send_message(str, webhooks[i])
-  
+  if (channel_id == '0'):
+    for i in range(len(webhooks)):
+        send_message(str, webhooks[i])
+  elif (channel_id == '1'):
+    send_message(str, webhooks[0])
+  elif (channel_id == '2'):
+    send_message(str, webhooks[1])
+  elif (channel_id == '3'):
+    send_message(str, webhooks[2])
+  else:
+    pass
+
   return HttpResponse("")
 
   #return HttpResponseRedirect('/slack/sendmessage.html')
