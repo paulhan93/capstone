@@ -9,9 +9,10 @@ from django.views.generic import TemplateView
 from .sendmessage import send_message
 from .getmessages import getmessage
 import json
+from django.views.decorators.csrf import csrf_exempt
 from datetime import datetime
 
-@api_view(["POST"])
+@csrf_exempt
 def sendmessage(request):
 
 # Janssen-5607
