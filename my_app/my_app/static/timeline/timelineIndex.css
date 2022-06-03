@@ -1,6 +1,6 @@
    .timeline{
     position: relative;
-    top: 13px;
+    top: 70px;
    }
 
   .flex-parent {
@@ -229,7 +229,7 @@
   
   /*media for index.html*/
 
-  @media (min-width: 0px) and (max-width: 1130px){
+  @media (min-width: 0px) and (max-width: 1094px){
   .timeline{
     top: 700px;
     margin-bottom: 40em;

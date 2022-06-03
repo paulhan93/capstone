@@ -3,8 +3,8 @@ li {
 }
 .calendar {
   position: absolute;
-  top: 240px;
-  right: 53%;
+  top: 250px;
+  right: 57%;
   width: 448px;
 }
 #monthYear {
@@ -34,23 +34,23 @@ ul {
  /*media for index.html*/
 @media (min-width: 1375px) and (max-width: 1573px) {
   .calendar{
-    right: 53%;
+    right: 56%;
   }
 }
 
 @media (min-width: 1208px) and (max-width: 1375px) {
   .calendar{
-    right: 53%;
+    right: 55%;
   }
 }
 
 @media (min-width: 800px) and (max-width: 1208px) {
   .calendar{
-    right: 52%;
+    right: 54%;
   }
 }
 
-@media (min-width: 0px) and (max-width: 1130px){
+@media (min-width: 0px) and (max-width: 1094px){
   .calendar{
       left: 50%;
       transform: translateX(-50%);
