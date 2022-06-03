@@ -3,6 +3,15 @@ body{
     overflow-x: hidden;
 }
 
+h2{
+    font-size: 2em;
+}
+
+#indexTitle{
+    position: relative;
+    top: -15px;
+}
+
 .top-nav{
     display: flex;
     justify-content: flex-start;
@@ -35,12 +44,14 @@ body{
     border: none;
     border-radius: 12px;
     color: white;
-    padding: 12px;
+    padding: 9px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
+    position: relative;
+    top: -8px;
   }
 
 
@@ -126,21 +137,28 @@ body{
     font-weight: 600;
 }
 
-#bottominfo{
+#bottominfoIndex{
     background-color: #22296a;
     position:relative;
-    bottom: -110px;
+    bottom: -50px;
+    width: 100%;
+    border-style: none;
+}
+#bottominfoHome{
+    background-color: #22296a;
+    position:relative;
+    bottom: -283px;
     width: 100%;
     border-style: none;
 }
 
-#bottominfo .info{
+.info{
     color: aliceblue;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
 
-#bottominfo .info .icon{
+.info .icon{
     grid-column-start: 1;
     grid-column-end: 3;
     /* justify-self: center; */
@@ -155,61 +173,57 @@ body{
     /* border-style: dotted; */
 
 }
-#bottominfo .info .icon .twitter{
+.info .icon .twitter{
     /* background-color: #fff; */
     /* color: aliceblue; */
     width: 25px;
     margin-right: 5px;
 }
-#bottominfo .info .icon .twitter .twitter_icon{
+.info .icon .twitter .twitter_icon{
     background-color: aliceblue;
     border-radius: 15%;
 }
 
-#bottominfo .info .icon .facebook{
+.info .icon .facebook{
     /* background-color:aqua; */
     width: 25px;
     margin-right: 5px;
 }
-#bottominfo .info .icon .facebook .facebook_icon{
+.info .icon .facebook .facebook_icon{
     background-color: aliceblue;
     border-radius: 15%;
 }
 
-#bottominfo .info .icon .google{
+.info .icon .google{
     /* background-color:aqua; */
     width: 25px;
     margin-right: 5px;
 }
-#bottominfo .info .icon .google .google_icon{
+.info .icon .google .google_icon{
     background-color: aliceblue;
     border-radius: 15%;
 }
 
-#bottominfo .info .icon .instagram{
+.info .icon .instagram{
     /* background-color:aqua; */
     width: 25px;
     margin-right: 5px;
 }
-#bottominfo .info .icon .instagram .instagram_icon{
+.info .icon .instagram .instagram_icon{
     background-color: aliceblue;
     border-radius: 15%;
 }
 
 
 
-#bottominfo .info .lefttext{
+.info .lefttext{
     grid-column-start: 1;
     grid-column-end: 2;
 
     margin-left: 10%;
 }
 
-/* #bottominfo .info .lefttext .text{
-    /* border-style: dotted; */
-    /* background-color: aqua; 
-} */
-#bottominfo .info .righttext{
+.info .righttext{
     grid-column-start: 2;
     grid-column-end: 3;
 

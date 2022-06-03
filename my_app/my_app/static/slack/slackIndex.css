@@ -1,36 +1,33 @@
-.slack{
-    /*for some reason, setting position other than `relative` breaks the position of everything else*/
-}
-
 .slackWindow{
+    /*for some reason, setting position other than `relative` breaks the position of everything else*/
     position: relative;
-    top: 70px;
+    top: 27px;
     width: 570px;
     height: 645px;
-    left: 52%;
+    left: 53%;
 }
 
  /*media for index.html*/
 @media (min-width: 1375px) and (max-width: 1573px) {
     .slackWindow{
-        left: 51%;
+        left: 52%;
        
     }
 }
 
 @media (min-width: 1208px) and (max-width: 1375px) {
     .slackWindow{
-        left: 50%;
+        left: 51%;
     }
 }
 
 @media (min-width: 800px) and (max-width: 1208px) {
     .slackWindow{
-        left: 49%;
+        left: 50%;
     }
 }
 
-@media (min-width: 0px) and (max-width: 1094px){
+@media (min-width: 0px) and (max-width: 1130px){
     .slackWindow{
         left: 50%;
         transform: translateX(-50%);
