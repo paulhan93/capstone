@@ -73,13 +73,13 @@ function changeCircleColor() {
       else{
         (theDiv.getElementsByClassName("input")[
           i
-        ].style.backgroundColor = "Orange");
+        ].style.backgroundColor = "Gray");
       }
     }
     else{
       (theDiv.getElementsByClassName("input")[
         i
-      ].style.backgroundColor = "#2C3E50");
+      ].style.backgroundColor = "DarkBlue");
     }
   }
 }
