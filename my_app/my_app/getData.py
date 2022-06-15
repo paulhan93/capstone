@@ -16,7 +16,7 @@ def scrape(request):
 def toJSON(kickoff,contract, spec, smoke_start, smoke_comp, val_S, val_comp, uat_S, uat_comp, golive, fpi, start, end, name, key):
     #print(name + key + kickoff + start + due)
 
-    data = {
+    '''data = {
         "Project Name": name,
         "Project Key": key,
         "Schedule": {
@@ -34,21 +34,29 @@ def toJSON(kickoff,contract, spec, smoke_start, smoke_comp, val_S, val_comp, uat
             "Start Date": start,
             "Due Date": end
         }
-    }
+    }'''
 
     with open('schedule.json', 'r+') as file:
-        f_data = json.load(file)
+        schedule_data = json.load(file)
 
-
-        for index in f_data["Projects"]:
-            #If exists quit
+        for index in schedule_data["Projects"]:
             if index["Project Name"] == name:
-                print("Exists")
-                return
+                index["Schedule"]["Contract Executed Date"] = contract
+                index["Schedule"]["Kickoff Date"] = kickoff
+                index["Schedule"]["Spec Sign Off"] = spec
+                index["Schedule"]["Smoke Testing Start"] = smoke_start
+                index["Schedule"]["Smoke Testing Complete"] = smoke_comp
+                index["Schedule"]["Validation Start"] = val_S
+                index["Schedule"]["Validation Complete"] = val_comp
+                index["Schedule"]["UAT Start"] = uat_S
+                index["Schedule"]["UAT Complete"] = uat_comp
+                index["Schedule"]["GoLive"] = golive
+                index["Schedule"]["FPI"] = fpi
+                index["Schedule"]["Start Date"] = start
+                index["Schedule"]["Due Date"] = end
 
-        f_data["Projects"].append(data)
         file.seek(0)
-        json.dump(f_data, file, indent=4)
+        json.dump(schedule_data, file, indent=4)
 
 def getResponse(url):
     headers = {
@@ -58,7 +66,7 @@ def getResponse(url):
     response = ''
     while response == '':
         try:
-            response = requests.get(url,headers=headers,auth=("psu_capstone@4gclinical.com", "3c8ij012OfNS38UsdU7U55E8"))
+            response = requests.get(url,headers=headers,auth=("psu_capstone@4gclinical.com", "B7iDc5S7K5HUatMBczhK6A65"))
             return response
         except:
             print("Connection refused by server..")
