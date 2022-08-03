@@ -1,3 +1,6 @@
+# https://id.atlassian.com/manage-profile/security/api-tokens   (to manage API tokens)
+# http://127.0.0.1:8000/jira/scrape     (to scrape latest Jira ticket changes)
+
 from asyncio import constants
 from django.http import HttpResponse
 
